@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom Nails Spa - Cita Gratis</title>
+  <style>
+    body {
+      background-color: #f7f4f1;
+      font-family: 'Georgia', serif;
+      color: #6d4c41;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    img.logo {
+      max-width: 150px;
+      margin-bottom: 1em;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+      color: #a67c52;
+    }
+    p {
+      font-size: 1em;
+      margin-bottom: 2em;
+    }
+    input[type="text"], button {
+      width: 100%;
+      padding: 0.75em;
+      margin-top: 1em;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #d9cbb4;
+    }
+    button {
+      background-color: #c9a66b;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #b48e59;
+    }
+    #msg {
+      margin-top: 1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Golden_flower_icon.svg/512px-Golden_flower_icon.svg.png" alt="Bloom Nails Spa" class="logo">
+    <h1>Bloom Nails Spa</h1>
+    <p>
+      ¡Hola! Estamos en marcha blanca y queremos regalarte una cita GRATIS. <br>
+      Deja tus datos y te contactaremos para agendar tu cita.
+    </p>
+    <form id="clientForm">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="text" name="whatsapp" placeholder="WhatsApp de contacto" required>
+      <button type="submit">Agendar mi cita</button>
+    </form>
+    <p id="msg"></p>
+  </div>
+  <script>
+    const form = document.getElementById('clientForm');
+    const msg = document.getElementById('msg');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch('https://script.google.com/macros/s/AKfycby33FAL3ATTTa_ZB6wLmwhERwTUPTLSyBG8HWbCLu2A7j1zG90bVmNACgOsnE7zv9kZ/exec', {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(response => {
+        msg.textContent = "¡Datos enviados correctamente! ✨ Pronto te contactaremos.";
+        form.reset();
+      })
+      .catch(error => {
+        msg.textContent = "Hubo un error. Intenta de nuevo.";
+        console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>
