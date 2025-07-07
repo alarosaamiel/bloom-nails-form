@@ -35,7 +35,7 @@
       font-size: 1em;
       margin-bottom: 2em;
     }
-    input[type="text"], button {
+    input[type="text"], input[type="tel"], button {
       width: 100%;
       padding: 0.75em;
       margin-top: 1em;
@@ -59,6 +59,7 @@
       font-weight: bold;
     }
   </style>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
   <div class="container">
@@ -70,9 +71,13 @@
     </p>
     <form id="clientForm">
       <input type="text" name="nombre" placeholder="Nombre completo" required>
-      <input type="text" name="whatsapp" placeholder="WhatsApp de contacto" required>
+      <input type="tel" name="whatsapp" placeholder="WhatsApp de contacto" required pattern="^\+?\d{10,15}$" title="Incluye tu número de WhatsApp con código de país, por ejemplo +51987654321">
+      <input type="text" name="website" style="display:none">
       <button type="submit">Agendar mi cita</button>
     </form>
+    <div id="success-animation" style="display:none;">
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_kyu7xb1v.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px; margin: auto;"  autoplay></lottie-player>
+    </div>
     <p id="msg"></p>
   </div>
   <script>
@@ -80,12 +85,17 @@
     const msg = document.getElementById('msg');
     form.addEventListener('submit', e => {
       e.preventDefault();
+      if (form.website && form.website.value !== "") {
+        msg.textContent = "Ups... parece que algo salió mal.";
+        return;
+      }
       fetch('https://script.google.com/macros/s/AKfycby33FAL3ATTTa_ZB6wLmwhERwTUPTLSyBG8HWbCLu2A7j1zG90bVmNACgOsnE7zv9kZ/exec', {
         method: 'POST',
         body: new FormData(form)
       })
       .then(response => {
         msg.textContent = "¡Datos enviados correctamente! ✨ Pronto te contactaremos.";
+        document.getElementById('success-animation').style.display = 'block';
         form.reset();
       })
       .catch(error => {
