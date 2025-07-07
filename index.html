@@ -78,24 +78,32 @@
   <script>
     const form = document.getElementById('clientForm');
     const msg = document.getElementById('msg');
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      fetch('https://script.google.com/macros/s/AKfycby33FAL3ATTTa_ZB6wLmwhERwTUPTLSyBG8HWbCLu2A7j1zG90bVmNACgOsnE7zv9kZ/exec, {
-        method: 'POST',
-        body: new FormData(form)
-      })
-      .then(response => {
+
+      const data = new URLSearchParams();
+      data.append("nombre", form.nombre.value);
+      data.append("whatsapp", form.whatsapp.value);
+
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycby33FAL3ATTTa_ZB6wLmwhERwTUPTLSyBG8HWbCLu2A7j1zG90bVmNACgOsnE7zv9kZ/exec', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: data
+        });
+
         if (response.ok) {
-          msg.textContent = "¡Datos enviados correctamente! ✨ Pronto te contactaremos para agendar tu cita.";
+          msg.textContent = "¡Datos enviados correctamente! ✨ Pronto te contactaremos.";
           form.reset();
         } else {
-          msg.textContent = "Hubo un error. Intenta de nuevo.";
+          msg.textContent = "Hubo un error al enviar. Intenta de nuevo.";
         }
-      })
-      .catch(error => {
-        msg.textContent = "Hubo un error. Intenta de nuevo.";
+      } catch (error) {
+        msg.textContent = "Hubo un error de conexión. Intenta de nuevo.";
         console.error(error);
-      });
+      }
     });
   </script>
 </body>
