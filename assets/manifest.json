@@ -1,11 +1,22 @@
 {
-  "extracted_assets": {
-    "image": 58,
-    "video": 1,
-    "font": 8,
-    "other": 0
-  },
-  "unique_assets": 67,
-  "original_html_bytes": 28588249,
-  "new_index_bytes": 229294
+  "name": "Bloom Nails Spa - Miraflores",
+  "short_name": "Bloom Nails",
+  "description": "No hacemos simplemente uñas. Creamos un momento para ti.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F6",
+  "theme_color": "#bf9270",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

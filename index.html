@@ -15,6 +15,25 @@
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#bf9270">
 <link rel="canonical" href="https://bloomnailssalon.com/">
+<!-- Icons / PWA -->
+<link rel="manifest" href="/assets/manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bloom Nails Spa">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<!-- Analytics placeholders: replace IDs when accounts are created -->
+<!-- Google Tag Manager: replace GTM-XXXXXXX and uncomment both GTM snippets. -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+-->
+
 
 <!-- =========================
      Open Graph (WhatsApp, Facebook, LinkedIn)
@@ -24,9 +43,10 @@
 <meta property="og:site_name" content="Bloom Nails Spa">
 <meta property="og:title" content="Bloom Nails Spa - Miraflores">
 <meta property="og:description" content="No hacemos simplemente uñas. Creamos un momento para ti, con atención personalizada y artistas especializadas.">
-<meta property="og:image" content="https://bloomnailssalon.com/bloom-nails-og-no-text.jpg">
-<meta property="og:image:secure_url" content="https://bloomnailssalon.com/bloom-nails-og-no-text.jpg">
+<meta property="og:image" content="https://bloomnailssalon.com/og-image.jpg">
+<meta property="og:image:secure_url" content="https://bloomnailssalon.com/og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Bloom Nails Spa - salón de uñas premium en Miraflores, Lima">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_PE">
@@ -37,7 +57,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bloom Nails Spa - Miraflores">
 <meta name="twitter:description" content="No hacemos simplemente uñas. Creamos un momento para ti, con atención personalizada y artistas especializadas.">
-<meta name="twitter:image" content="https://bloomnailssalon.com/bloom-nails-og-no-text.jpg">
+<meta name="twitter:image" content="https://bloomnailssalon.com/og-image.jpg">
 
 <!-- =========================
      Schema.org / Local Business
@@ -49,9 +69,10 @@
   "name": "Bloom Nails Spa",
   "alternateName": "Bloom Nails Spa - Miraflores",
   "url": "https://bloomnailssalon.com/",
-  "image": "https://bloomnailssalon.com/bloom-nails-og-no-text.jpg",
-  "logo": "https://bloomnailssalon.com/assets/images/image_005_f586c7daede0.png",
+  "image": "https://bloomnailssalon.com/og-image.jpg",
+  "logo": "https://bloomnailssalon.com/assets/images/image_005_f586c7daede0.webp",
   "description": "No hacemos simplemente uñas. Creamos un momento para ti. Descubre una experiencia de belleza y bienestar en Miraflores.",
+  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Miraflores",
@@ -752,7 +773,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .porque {
   position: relative;
   padding: 120px 48px;
-  background-image: linear-gradient(rgba(255,248,240,0.30), rgba(255,248,240,0.44)), url("assets/images/image_001_a3458280bc16.png");
+  background-image: linear-gradient(rgba(255,248,240,0.30), rgba(255,248,240,0.44)), url("assets/images/image_001_a3458280bc16.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1818,7 +1839,7 @@ body.editing .g-card:hover{outline:2px dashed var(--oro);}
   
 .hero-image{
 position:absolute;inset:0;
-background:url('assets/images/image_002_4f67c94bd26a.jpg') center 30%/cover no-repeat;
+background:url('assets/images/image_002_4f67c94bd26a.webp') center 30%/cover no-repeat;
 z-index:-1;
 }
 
@@ -2366,7 +2387,7 @@ const TESTIMONIOS = [
   overflow: hidden !important;
   background:
     linear-gradient(rgba(255, 247, 239, .44), rgba(255, 247, 239, .52)),
-    url("assets/images/image_003_bf44450e4616.png") center center / cover no-repeat !important;
+    url("assets/images/image_003_bf44450e4616.webp") center center / cover no-repeat !important;
   color: #3b332f !important;
 }
 
@@ -2439,7 +2460,7 @@ section#servicios.servicios-tabs {
   overflow: hidden !important;
   background:
     linear-gradient(rgba(255, 247, 239, .40), rgba(255, 247, 239, .50)),
-    url("assets/images/image_004_9148f26c8ead.png") center center / cover no-repeat !important;
+    url("assets/images/image_004_9148f26c8ead.webp") center center / cover no-repeat !important;
   color: #3b332f !important;
 }
 
@@ -3830,7 +3851,7 @@ body.editing .t-add-wrap { display: flex; }
      NAVEGACIÓN
      ═══════════════════════ -->
 <nav class="nav" id="nav">
-<a class="nav-logo" href="#"><img alt="Bloom Nails Spa" src="assets/images/image_005_f586c7daede0.png" style="height:48px;width:auto;object-fit:contain;filter:brightness(0) invert(1);transition:filter 0.5s;"/></a>
+<a class="nav-logo" href="#"><img alt="Bloom Nails Spa" src="assets/images/image_005_f586c7daede0.webp" style="height:48px;width:auto;object-fit:contain;filter:brightness(0) invert(1);transition:filter 0.5s;"/></a>
 <ul class="nav-links">
 <li><a href="#bloom-experience">Experiencia</a></li>
 <li><a href="#servicios">Servicios</a></li>
@@ -3887,7 +3908,7 @@ body.editing .t-add-wrap { display: flex; }
 </div>
 <div class="hero-content">
 <div class="hero-logo-wrap">
-<img alt="Bloom Nails Spa" class="hero-logo-img" src="assets/images/image_005_f586c7daede0.png"/>
+<img alt="Bloom Nails Spa" class="hero-logo-img" src="assets/images/image_005_f586c7daede0.webp"/>
 </div>
 <p class="hero-eyebrow">Miraflores · Lima · Perú</p>
 <h1 class="hero-title">
@@ -3926,7 +3947,7 @@ body.editing .t-add-wrap { display: flex; }
 <section class="momento">
 <div class="momento-visual">
 <div class="momento-img-placeholder tea">
-<img alt="Bloom Nails Spa experience con bebida, galletas y ambiente elegante" class="momento-feature-img" src="assets/images/image_006_541b1a3d61e2.png"/>
+<img alt="Bloom Nails Spa experience con bebida, galletas y ambiente elegante" class="momento-feature-img" src="assets/images/image_006_541b1a3d61e2.webp"/>
 </div>
 <div class="momento-overlay"></div>
 </div>
@@ -3945,7 +3966,7 @@ body.editing .t-add-wrap { display: flex; }
 <section class="momento">
 <div class="momento-visual">
 <div class="momento-img-placeholder flowers">
-<img alt="Experiencia Bloom Nails Spa" class="momento-feature-img momento-feature-img-02" loading="lazy" src="assets/images/image_007_763330beae33.jpg"/>
+<img alt="Experiencia Bloom Nails Spa" class="momento-feature-img momento-feature-img-02" loading="lazy" src="assets/images/image_007_763330beae33.webp"/>
 </div>
 <div class="momento-overlay"></div>
 </div>
@@ -3964,7 +3985,7 @@ body.editing .t-add-wrap { display: flex; }
 <section class="momento">
 <div class="momento-visual">
 <div class="momento-img-placeholder hands">
-<video aria-label="Diseño nail art Bloom Nails Spa" autoplay="" class="momento-feature-video-03" controls="" loop="" muted="" playsinline="" poster="assets/images/image_008_ab0e10876516.jpg" preload="auto" webkit-playsinline="">
+<video aria-label="Diseño nail art Bloom Nails Spa" autoplay="" class="momento-feature-video-03" controls="" loop="" muted="" playsinline="" poster="assets/images/image_008_ab0e10876516.webp" preload="auto" webkit-playsinline="">
 <source src="assets/videos/video_001_b42f5a31cbd9.mp4" type="video/mp4"/>
 </video>
 </div>
@@ -3984,7 +4005,7 @@ body.editing .t-add-wrap { display: flex; }
 <section class="momento">
 <div class="momento-visual">
 <div class="momento-img-placeholder smile">
-<img alt="Brindis Bloom Nails Spa" class="momento-feature-img" loading="eager" src="assets/images/image_006_541b1a3d61e2.png"/>
+<img alt="Brindis Bloom Nails Spa" class="momento-feature-img" loading="eager" src="assets/images/image_006_541b1a3d61e2.webp"/>
 </div>
 <div class="momento-overlay"></div>
 </div>
@@ -4236,203 +4257,203 @@ body.editing .t-add-wrap { display: flex; }
 <div class="g-track" id="galeriaTrack">
 <article class="g-card" data-idx="0">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Acrílicas Bloom" loading="lazy" src="assets/images/image_009_fd12fd12dfe5.jpg"/>
+<img alt="Acrílicas Bloom" loading="lazy" src="assets/images/image_009_fd12fd12dfe5.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Acrílicas</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="1">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Acrílicas II Bloom" loading="lazy" src="assets/images/image_010_3d6116fbd1d5.jpg"/>
+<img alt="Acrílicas II Bloom" loading="lazy" src="assets/images/image_010_3d6116fbd1d5.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Acrílicas II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="2">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Builder gel Bloom" loading="lazy" src="assets/images/image_011_caa71c5732a9.jpg"/>
+<img alt="Builder gel Bloom" loading="lazy" src="assets/images/image_011_caa71c5732a9.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Builder gel</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="3">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Builder gel II Bloom" loading="lazy" src="assets/images/image_012_fcf165464c1d.jpg"/>
+<img alt="Builder gel II Bloom" loading="lazy" src="assets/images/image_012_fcf165464c1d.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Builder gel II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="4">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Builder gel III Bloom" loading="lazy" src="assets/images/image_013_6be9b8f5a29f.jpg"/>
+<img alt="Builder gel III Bloom" loading="lazy" src="assets/images/image_013_6be9b8f5a29f.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Builder gel III</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="5">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Builder gel IV Bloom" loading="lazy" src="assets/images/image_014_24685ff59fb3.jpg"/>
+<img alt="Builder gel IV Bloom" loading="lazy" src="assets/images/image_014_24685ff59fb3.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Builder gel IV</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="6">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Clásica Bloom" loading="lazy" src="assets/images/image_015_3f8105efce25.jpg"/>
+<img alt="Clásica Bloom" loading="lazy" src="assets/images/image_015_3f8105efce25.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Clásica</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="7">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Gel Bloom" loading="lazy" src="assets/images/image_016_a069cd5c50ed.jpg"/>
+<img alt="Gel Bloom" loading="lazy" src="assets/images/image_016_a069cd5c50ed.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Gel</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="8">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Gel II Bloom" loading="lazy" src="assets/images/image_017_19ea2937cc94.jpg"/>
+<img alt="Gel II Bloom" loading="lazy" src="assets/images/image_017_19ea2937cc94.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Gel II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="9">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Híbrida Bloom" loading="lazy" src="assets/images/image_018_0fc89b8f6f4d.jpg"/>
+<img alt="Híbrida Bloom" loading="lazy" src="assets/images/image_018_0fc89b8f6f4d.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Híbrida</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="10">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Híbrida I Bloom" loading="lazy" src="assets/images/image_019_9f72d12074f7.jpg"/>
+<img alt="Híbrida I Bloom" loading="lazy" src="assets/images/image_019_9f72d12074f7.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Híbrida I</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="11">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Kapping Bloom" loading="lazy" src="assets/images/image_020_efd55003b444.jpg"/>
+<img alt="Kapping Bloom" loading="lazy" src="assets/images/image_020_efd55003b444.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Kapping</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="12">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Polygel Bloom" loading="lazy" src="assets/images/image_021_1af76c80112a.jpg"/>
+<img alt="Polygel Bloom" loading="lazy" src="assets/images/image_021_1af76c80112a.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Polygel</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="13">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Polygel II Bloom" loading="lazy" src="assets/images/image_022_43319ec722a4.jpg"/>
+<img alt="Polygel II Bloom" loading="lazy" src="assets/images/image_022_43319ec722a4.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Polygel II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="14">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Rubber base Bloom" loading="lazy" src="assets/images/image_023_6b9632ef12ef.jpg"/>
+<img alt="Rubber base Bloom" loading="lazy" src="assets/images/image_023_6b9632ef12ef.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Rubber base</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="15">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Rubber base II Bloom" loading="lazy" src="assets/images/image_024_41d7d957877e.jpg"/>
+<img alt="Rubber base II Bloom" loading="lazy" src="assets/images/image_024_41d7d957877e.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Rubber base II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="16">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Soft gel Bloom" loading="lazy" src="assets/images/image_025_b1d986794f33.jpg"/>
+<img alt="Soft gel Bloom" loading="lazy" src="assets/images/image_025_b1d986794f33.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Soft gel</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="17">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Soft gel II Bloom" loading="lazy" src="assets/images/image_026_e85a939efcb7.jpg"/>
+<img alt="Soft gel II Bloom" loading="lazy" src="assets/images/image_026_e85a939efcb7.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Soft gel II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="21">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Pedicure clásica Bloom" loading="lazy" src="assets/images/image_027_f91c1238fc67.jpg"/>
+<img alt="Pedicure clásica Bloom" loading="lazy" src="assets/images/image_027_f91c1238fc67.webp"/>
 <div class="g-caption"><span>Pedicure</span><strong>Pedicure clásica</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="22">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Pedicure oscura Bloom" loading="lazy" src="assets/images/image_028_8c3a6b790867.jpg"/>
+<img alt="Pedicure oscura Bloom" loading="lazy" src="assets/images/image_028_8c3a6b790867.webp"/>
 <div class="g-caption"><span>Pedicure</span><strong>Pedicure oscura</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="23">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Pedicure nude Bloom" loading="lazy" src="assets/images/image_029_aa4ec399c389.jpg"/>
+<img alt="Pedicure nude Bloom" loading="lazy" src="assets/images/image_029_aa4ec399c389.webp"/>
 <div class="g-caption"><span>Pedicure</span><strong>Pedicure nude</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="24">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Pedicure floral Bloom" loading="lazy" src="assets/images/image_030_4670f1d80fd5.jpg"/>
+<img alt="Pedicure floral Bloom" loading="lazy" src="assets/images/image_030_4670f1d80fd5.webp"/>
 <div class="g-caption"><span>Pedicure</span><strong>Pedicure floral</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="25">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Tratamiento Bloom Bloom" loading="lazy" src="assets/images/image_031_2fc5cdf4a4dc.jpg"/>
+<img alt="Tratamiento Bloom Bloom" loading="lazy" src="assets/images/image_031_2fc5cdf4a4dc.webp"/>
 <div class="g-caption"><span>Pedicure</span><strong>Tratamiento Bloom</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="26">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Pedicure verano Bloom" loading="lazy" src="assets/images/image_032_fb9cf230e654.jpg"/>
+<img alt="Pedicure verano Bloom" loading="lazy" src="assets/images/image_032_fb9cf230e654.webp"/>
 <div class="g-caption"><span>Pedicure</span><strong>Pedicure verano</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="27">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Negro y marrón natural Bloom" loading="lazy" src="assets/images/image_033_c03c0a5cdf04.jpg"/>
+<img alt="Negro y marrón natural Bloom" loading="lazy" src="assets/images/image_033_c03c0a5cdf04.webp"/>
 <div class="g-caption"><span>Lashes</span><strong>Negro y marrón natural</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="28">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Extensión de cejas Bloom" loading="lazy" src="assets/images/image_034_a813b36c783a.jpg"/>
+<img alt="Extensión de cejas Bloom" loading="lazy" src="assets/images/image_034_a813b36c783a.webp"/>
 <div class="g-caption"><span>Brows</span><strong>Extensión de cejas</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="29">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Antes y después Bloom" loading="lazy" src="assets/images/image_035_3e07d07a8f1e.jpg"/>
+<img alt="Antes y después Bloom" loading="lazy" src="assets/images/image_035_3e07d07a8f1e.webp"/>
 <div class="g-caption"><span>Lashes</span><strong>Antes y después</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="30">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Lashes y cejas Bloom" loading="lazy" src="assets/images/image_036_185c28871024.jpg"/>
+<img alt="Lashes y cejas Bloom" loading="lazy" src="assets/images/image_036_185c28871024.webp"/>
 <div class="g-caption"><span>Lashes &amp; Brows</span><strong>Lashes y cejas</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
 <article class="g-card" data-idx="31">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Lashes y brows Bloom" loading="lazy" src="assets/images/image_037_76c1cda202d4.jpg"/>
+<img alt="Lashes y brows Bloom" loading="lazy" src="assets/images/image_037_76c1cda202d4.webp"/>
 <div class="g-caption"><span>Lashes &amp; Brows</span><strong>Lashes y brows</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
@@ -4544,27 +4565,27 @@ body.editing .t-add-wrap { display: flex; }
 </div>
 <div class="mujeres-scroll">
 <!-- Primera copia -->
-<div class="mujer-card"><div class="mujer-bg joven" style="background-image:url('assets/images/image_038_860fb9ad9220.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🌸</span></div><div class="mujer-overlay"><p class="mujer-label">La chica joven</p><p class="mujer-sublabel">Bold · Creativa · Libre</p></div></div>
-<div class="mujer-card"><div class="mujer-bg novia" style="background-image:url('assets/images/image_039_c7fa393c2935.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💍</span></div><div class="mujer-overlay"><p class="mujer-label">La novia</p><p class="mujer-sublabel">Elegante · Delicada · Especial</p></div></div>
-<div class="mujer-card"><div class="mujer-bg ejecutiva" style="background-image:url('assets/images/image_040_658ff17f2be9.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💼</span></div><div class="mujer-overlay"><p class="mujer-label">La ejecutiva</p><p class="mujer-sublabel">Precisa · Impecable · Segura</p></div></div>
-<div class="mujer-card"><div class="mujer-bg mayor" style="background-image:url('assets/images/image_041_d920e91c9862.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🌷</span></div><div class="mujer-overlay"><p class="mujer-label">La señora</p><p class="mujer-sublabel">Distinguida · Serena · Hermosa</p></div></div>
-<div class="mujer-card"><div class="mujer-bg mama" style="background-image:url('assets/images/image_042_c42cfee3100c.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🤍</span></div><div class="mujer-overlay"><p class="mujer-label">La mamá</p><p class="mujer-sublabel">Su momento · Su pausa · Su regalo</p></div></div>
-<div class="mujer-card"><div class="mujer-bg estudiante" style="background-image:url('assets/images/image_043_805231bd5e8d.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">✨</span></div><div class="mujer-overlay"><p class="mujer-label">La estudiante</p><p class="mujer-sublabel">Fresca · Natural · Auténtica</p></div></div>
-<div class="mujer-card"><div class="mujer-bg papa" style="background-image:url('assets/images/image_044_42228d5e0591.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">👨‍👦</span></div><div class="mujer-overlay"><p class="mujer-label">El papá</p><p class="mujer-sublabel">Porque también merece un momento</p></div></div>
-<div class="mujer-card"><div class="mujer-bg ejecutivo" style="background-image:url('assets/images/image_045_f0baf797e935.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💼</span></div><div class="mujer-overlay"><p class="mujer-label">El ejecutivo</p><p class="mujer-sublabel">Impecable · Seguro · Profesional</p></div></div>
-<div class="mujer-card"><div class="mujer-bg novio" style="background-image:url('assets/images/image_046_05cd2db6722a.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🤵</span></div><div class="mujer-overlay"><p class="mujer-label">El novio</p><p class="mujer-sublabel">Para el gran día</p></div></div>
-<div class="mujer-card"><div class="mujer-bg deportista" style="background-image:url('assets/images/image_047_8a8982474655.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💪</span></div><div class="mujer-overlay"><p class="mujer-label">El deportista</p><p class="mujer-sublabel">Cuidado activo · Siempre listo</p></div></div>
+<div class="mujer-card"><div class="mujer-bg joven" style="background-image:url('assets/images/image_038_860fb9ad9220.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🌸</span></div><div class="mujer-overlay"><p class="mujer-label">La chica joven</p><p class="mujer-sublabel">Bold · Creativa · Libre</p></div></div>
+<div class="mujer-card"><div class="mujer-bg novia" style="background-image:url('assets/images/image_039_c7fa393c2935.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💍</span></div><div class="mujer-overlay"><p class="mujer-label">La novia</p><p class="mujer-sublabel">Elegante · Delicada · Especial</p></div></div>
+<div class="mujer-card"><div class="mujer-bg ejecutiva" style="background-image:url('assets/images/image_040_658ff17f2be9.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💼</span></div><div class="mujer-overlay"><p class="mujer-label">La ejecutiva</p><p class="mujer-sublabel">Precisa · Impecable · Segura</p></div></div>
+<div class="mujer-card"><div class="mujer-bg mayor" style="background-image:url('assets/images/image_041_d920e91c9862.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🌷</span></div><div class="mujer-overlay"><p class="mujer-label">La señora</p><p class="mujer-sublabel">Distinguida · Serena · Hermosa</p></div></div>
+<div class="mujer-card"><div class="mujer-bg mama" style="background-image:url('assets/images/image_042_c42cfee3100c.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🤍</span></div><div class="mujer-overlay"><p class="mujer-label">La mamá</p><p class="mujer-sublabel">Su momento · Su pausa · Su regalo</p></div></div>
+<div class="mujer-card"><div class="mujer-bg estudiante" style="background-image:url('assets/images/image_043_805231bd5e8d.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">✨</span></div><div class="mujer-overlay"><p class="mujer-label">La estudiante</p><p class="mujer-sublabel">Fresca · Natural · Auténtica</p></div></div>
+<div class="mujer-card"><div class="mujer-bg papa" style="background-image:url('assets/images/image_044_42228d5e0591.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">👨‍👦</span></div><div class="mujer-overlay"><p class="mujer-label">El papá</p><p class="mujer-sublabel">Porque también merece un momento</p></div></div>
+<div class="mujer-card"><div class="mujer-bg ejecutivo" style="background-image:url('assets/images/image_045_f0baf797e935.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💼</span></div><div class="mujer-overlay"><p class="mujer-label">El ejecutivo</p><p class="mujer-sublabel">Impecable · Seguro · Profesional</p></div></div>
+<div class="mujer-card"><div class="mujer-bg novio" style="background-image:url('assets/images/image_046_05cd2db6722a.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🤵</span></div><div class="mujer-overlay"><p class="mujer-label">El novio</p><p class="mujer-sublabel">Para el gran día</p></div></div>
+<div class="mujer-card"><div class="mujer-bg deportista" style="background-image:url('assets/images/image_047_8a8982474655.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💪</span></div><div class="mujer-overlay"><p class="mujer-label">El deportista</p><p class="mujer-sublabel">Cuidado activo · Siempre listo</p></div></div>
 <!-- Segunda copia -->
-<div class="mujer-card"><div class="mujer-bg joven" style="background-image:url('assets/images/image_038_860fb9ad9220.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🌸</span></div><div class="mujer-overlay"><p class="mujer-label">La chica joven</p><p class="mujer-sublabel">Bold · Creativa · Libre</p></div></div>
-<div class="mujer-card"><div class="mujer-bg novia" style="background-image:url('assets/images/image_039_c7fa393c2935.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💍</span></div><div class="mujer-overlay"><p class="mujer-label">La novia</p><p class="mujer-sublabel">Elegante · Delicada · Especial</p></div></div>
-<div class="mujer-card"><div class="mujer-bg ejecutiva" style="background-image:url('assets/images/image_040_658ff17f2be9.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💼</span></div><div class="mujer-overlay"><p class="mujer-label">La ejecutiva</p><p class="mujer-sublabel">Precisa · Impecable · Segura</p></div></div>
-<div class="mujer-card"><div class="mujer-bg mayor" style="background-image:url('assets/images/image_041_d920e91c9862.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🌷</span></div><div class="mujer-overlay"><p class="mujer-label">La señora</p><p class="mujer-sublabel">Distinguida · Serena · Hermosa</p></div></div>
-<div class="mujer-card"><div class="mujer-bg mama" style="background-image:url('assets/images/image_042_c42cfee3100c.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🤍</span></div><div class="mujer-overlay"><p class="mujer-label">La mamá</p><p class="mujer-sublabel">Su momento · Su pausa · Su regalo</p></div></div>
-<div class="mujer-card"><div class="mujer-bg estudiante" style="background-image:url('assets/images/image_043_805231bd5e8d.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">✨</span></div><div class="mujer-overlay"><p class="mujer-label">La estudiante</p><p class="mujer-sublabel">Fresca · Natural · Auténtica</p></div></div>
-<div class="mujer-card"><div class="mujer-bg papa" style="background-image:url('assets/images/image_044_42228d5e0591.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">👨‍👦</span></div><div class="mujer-overlay"><p class="mujer-label">El papá</p><p class="mujer-sublabel">Porque también merece un momento</p></div></div>
-<div class="mujer-card"><div class="mujer-bg ejecutivo" style="background-image:url('assets/images/image_045_f0baf797e935.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💼</span></div><div class="mujer-overlay"><p class="mujer-label">El ejecutivo</p><p class="mujer-sublabel">Impecable · Seguro · Profesional</p></div></div>
-<div class="mujer-card"><div class="mujer-bg novio" style="background-image:url('assets/images/image_046_05cd2db6722a.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🤵</span></div><div class="mujer-overlay"><p class="mujer-label">El novio</p><p class="mujer-sublabel">Para el gran día</p></div></div>
-<div class="mujer-card"><div class="mujer-bg deportista" style="background-image:url('assets/images/image_047_8a8982474655.jpg');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💪</span></div><div class="mujer-overlay"><p class="mujer-label">El deportista</p><p class="mujer-sublabel">Cuidado activo · Siempre listo</p></div></div>
+<div class="mujer-card"><div class="mujer-bg joven" style="background-image:url('assets/images/image_038_860fb9ad9220.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🌸</span></div><div class="mujer-overlay"><p class="mujer-label">La chica joven</p><p class="mujer-sublabel">Bold · Creativa · Libre</p></div></div>
+<div class="mujer-card"><div class="mujer-bg novia" style="background-image:url('assets/images/image_039_c7fa393c2935.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💍</span></div><div class="mujer-overlay"><p class="mujer-label">La novia</p><p class="mujer-sublabel">Elegante · Delicada · Especial</p></div></div>
+<div class="mujer-card"><div class="mujer-bg ejecutiva" style="background-image:url('assets/images/image_040_658ff17f2be9.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💼</span></div><div class="mujer-overlay"><p class="mujer-label">La ejecutiva</p><p class="mujer-sublabel">Precisa · Impecable · Segura</p></div></div>
+<div class="mujer-card"><div class="mujer-bg mayor" style="background-image:url('assets/images/image_041_d920e91c9862.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🌷</span></div><div class="mujer-overlay"><p class="mujer-label">La señora</p><p class="mujer-sublabel">Distinguida · Serena · Hermosa</p></div></div>
+<div class="mujer-card"><div class="mujer-bg mama" style="background-image:url('assets/images/image_042_c42cfee3100c.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🤍</span></div><div class="mujer-overlay"><p class="mujer-label">La mamá</p><p class="mujer-sublabel">Su momento · Su pausa · Su regalo</p></div></div>
+<div class="mujer-card"><div class="mujer-bg estudiante" style="background-image:url('assets/images/image_043_805231bd5e8d.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">✨</span></div><div class="mujer-overlay"><p class="mujer-label">La estudiante</p><p class="mujer-sublabel">Fresca · Natural · Auténtica</p></div></div>
+<div class="mujer-card"><div class="mujer-bg papa" style="background-image:url('assets/images/image_044_42228d5e0591.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">👨‍👦</span></div><div class="mujer-overlay"><p class="mujer-label">El papá</p><p class="mujer-sublabel">Porque también merece un momento</p></div></div>
+<div class="mujer-card"><div class="mujer-bg ejecutivo" style="background-image:url('assets/images/image_045_f0baf797e935.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💼</span></div><div class="mujer-overlay"><p class="mujer-label">El ejecutivo</p><p class="mujer-sublabel">Impecable · Seguro · Profesional</p></div></div>
+<div class="mujer-card"><div class="mujer-bg novio" style="background-image:url('assets/images/image_046_05cd2db6722a.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">🤵</span></div><div class="mujer-overlay"><p class="mujer-label">El novio</p><p class="mujer-sublabel">Para el gran día</p></div></div>
+<div class="mujer-card"><div class="mujer-bg deportista" style="background-image:url('assets/images/image_047_8a8982474655.webp');background-size:cover;background-position:center top;"><span class="mujer-emoji" style="display:none">💪</span></div><div class="mujer-overlay"><p class="mujer-label">El deportista</p><p class="mujer-sublabel">Cuidado activo · Siempre listo</p></div></div>
 </div>
 <div style="text-align:center;margin-top:48px;padding-bottom:8px;">
 <a href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20vivir%20la%20experiencia%20Bloom%20%F0%9F%8C%B8" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;background:#25D366;color:white;
@@ -4595,7 +4616,7 @@ body.editing .t-add-wrap { display: flex; }
 <div class="momentos-grid">
 <div class="momento-card reveal">
 <div class="momento-card-img" style="background:#F7EFE8;">
-<img alt="Un momento para desconectar" src="assets/images/image_048_9aa243701eb8.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+<img alt="Un momento para desconectar" src="assets/images/image_048_9aa243701eb8.webp" style="width:100%;height:100%;object-fit:cover;display:block;"/>
 </div>
 <div class="momento-card-body">
 <span class="momento-card-emoji">🌿</span>
@@ -4604,7 +4625,7 @@ body.editing .t-add-wrap { display: flex; }
 </div>
 <div class="momento-card reveal reveal-delay-1">
 <div class="momento-card-img" style="background:#F7EFE8;">
-<img alt="Antes de tus vacaciones" src="assets/images/image_049_e214b6e47e3c.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+<img alt="Antes de tus vacaciones" src="assets/images/image_049_e214b6e47e3c.webp" style="width:100%;height:100%;object-fit:cover;display:block;"/>
 </div>
 <div class="momento-card-body">
 <span class="momento-card-emoji">☀️</span>
@@ -4613,7 +4634,7 @@ body.editing .t-add-wrap { display: flex; }
 </div>
 <div class="momento-card reveal reveal-delay-2">
 <div class="momento-card-img" style="background:#F7EFE8;">
-<img alt="Para un día inolvidable" src="assets/images/image_050_24f72966103a.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+<img alt="Para un día inolvidable" src="assets/images/image_050_24f72966103a.webp" style="width:100%;height:100%;object-fit:cover;display:block;"/>
 </div>
 <div class="momento-card-body">
 <span class="momento-card-emoji">💍</span>
@@ -4622,7 +4643,7 @@ body.editing .t-add-wrap { display: flex; }
 </div>
 <div class="momento-card reveal reveal-delay-3">
 <div class="momento-card-img" style="background:#F7EFE8;">
-<img alt="Porque sí" src="assets/images/image_051_b4b53eb2d39b.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+<img alt="Porque sí" src="assets/images/image_051_b4b53eb2d39b.webp" style="width:100%;height:100%;object-fit:cover;display:block;"/>
 </div>
 <div class="momento-card-body">
 <span class="momento-card-emoji">🎁</span>
@@ -4654,31 +4675,31 @@ body.editing .t-add-wrap { display: flex; }
 </div>
 <div class="experiencia-steps">
 <div class="exp-step reveal">
-<div class="exp-icon"><img alt="Bebida de cortesía" loading="lazy" src="assets/images/image_052_7933e6fa5e78.jpg"/></div>
+<div class="exp-icon"><img alt="Bebida de cortesía" loading="lazy" src="assets/images/image_052_7933e6fa5e78.webp"/></div>
 <p class="exp-label">Bebida de cortesía</p>
 </div>
 <div class="exp-step reveal reveal-delay-1">
-<div class="exp-icon"><img alt="Asesoría personalizada" loading="lazy" src="assets/images/image_053_6c4e61de4872.jpg"/></div>
+<div class="exp-icon"><img alt="Asesoría personalizada" loading="lazy" src="assets/images/image_053_6c4e61de4872.webp"/></div>
 <p class="exp-label">Asesoría personalizada</p>
 </div>
 <div class="exp-step reveal reveal-delay-2">
-<div class="exp-icon"><img alt="Preparación y cuidado" loading="lazy" src="assets/images/image_054_02da28b32dcd.jpg"/></div>
+<div class="exp-icon"><img alt="Preparación y cuidado" loading="lazy" src="assets/images/image_054_02da28b32dcd.webp"/></div>
 <p class="exp-label">Preparación y cuidado</p>
 </div>
 <div class="exp-step reveal reveal-delay-3">
-<div class="exp-icon"><img alt="Productos de calidad" loading="lazy" src="assets/images/image_055_c39c5861f71f.jpg"/></div>
+<div class="exp-icon"><img alt="Productos de calidad" loading="lazy" src="assets/images/image_055_c39c5861f71f.webp"/></div>
 <p class="exp-label">Productos de calidad</p>
 </div>
 <div class="exp-step reveal reveal-delay-4">
-<div class="exp-icon"><img alt="Masaje relajante" loading="lazy" src="assets/images/image_056_61b32f7a0cee.jpg"/></div>
+<div class="exp-icon"><img alt="Masaje relajante" loading="lazy" src="assets/images/image_056_61b32f7a0cee.webp"/></div>
 <p class="exp-label">Masaje relajante</p>
 </div>
 <div class="exp-step reveal reveal-delay-5">
-<div class="exp-icon"><img alt="Acabado impecable" loading="lazy" src="assets/images/image_057_e46c80496fb5.jpg"/></div>
+<div class="exp-icon"><img alt="Acabado impecable" loading="lazy" src="assets/images/image_057_e46c80496fb5.webp"/></div>
 <p class="exp-label">Acabado impecable</p>
 </div>
 <div class="exp-step reveal reveal-delay-6">
-<div class="exp-icon"><img alt="Una experiencia que permanece" loading="lazy" src="assets/images/image_058_1eef5458b6b3.jpg"/></div>
+<div class="exp-icon"><img alt="Una experiencia que permanece" loading="lazy" src="assets/images/image_058_1eef5458b6b3.webp"/></div>
 <p class="exp-label">Una experiencia que permanece</p>
 </div>
 </div>
@@ -5940,6 +5961,40 @@ html{scroll-behavior:smooth;}
     if(active) window.bloomSwitchService(active.getAttribute('data-tab'));
   });
 })();
+</script>
+
+
+<script>
+/* Bloom tracking layer: works with Google Tag Manager/GA4, Meta Pixel and Clarity after their IDs are configured. */
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  function bloomTrack(eventName, params){
+    params = params || {};
+    try { window.dataLayer.push(Object.assign({event: eventName}, params)); } catch(e) {}
+    try { if (typeof gtag === 'function') gtag('event', eventName, params); } catch(e) {}
+    try { if (typeof fbq === 'function') fbq('trackCustom', eventName, params); } catch(e) {}
+    try { if (typeof clarity === 'function') clarity('event', eventName); } catch(e) {}
+  }
+  window.bloomTrack = bloomTrack;
+  function labelFor(el){ return (el.getAttribute('aria-label') || el.innerText || el.textContent || el.href || '').trim().slice(0,120); }
+  document.addEventListener('click', function(e){
+    var el = e.target.closest('a, button');
+    if(!el) return;
+    var href = (el.getAttribute('href') || '').toLowerCase();
+    var txt = labelFor(el).toLowerCase();
+    if(href.indexOf('wa.me')>-1 || href.indexOf('whatsapp')>-1 || txt.indexOf('whatsapp')>-1){ bloomTrack('click_whatsapp', {label: labelFor(el)}); }
+    if(txt.indexOf('reserv')>-1 || href.indexOf('reserv')>-1){ bloomTrack('click_reservar', {label: labelFor(el)}); }
+    if(txt.indexOf('trabaja')>-1 || txt.indexOf('únete')>-1 || txt.indexOf('unete')>-1){ bloomTrack('click_trabaja_con_nosotros', {label: labelFor(el)}); }
+    if(txt.indexOf('contacto')>-1 || href.indexOf('mailto:')>-1){ bloomTrack('click_contacto', {label: labelFor(el)}); }
+  }, {passive:true});
+})();
+</script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){ navigator.serviceWorker.register('/service-worker.js').catch(function(){}); });
+}
 </script>
 
 </body>
