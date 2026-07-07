@@ -1,7 +1,3 @@
-# Bloom Nails Spa landing
+Bloom Mobile Hero Logo Safe Fix
 
-Proyecto optimizado para GitHub Pages. Subir todo el contenido de esta carpeta a la raíz del repositorio.
-
-
-## Mobile Hero Premium Optimization
-Ajuste responsive solo para celulares: logo hero, jerarquía de texto, espaciado y botones. No altera desktop.
+Ajusta el logo blanco del hero solo en mobile: menor tamaño, más espacio superior y sin recorte. No afecta desktop.
