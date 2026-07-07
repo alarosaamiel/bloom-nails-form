@@ -3434,7 +3434,43 @@ body.editing .t-add-wrap { display: flex; }
   }
   .mapa-container iframe { min-height: 380px !important; }
 }
-</style></head>
+</style>
+<!-- BLOOM LOGO VISIBILITY FIX -->
+<style>
+  /* El logo original tenía mucho espacio transparente alrededor; este fix hace que se vea con presencia en web y mobile. */
+  .nav-logo img{
+    width:150px !important;
+    height:auto !important;
+    max-height:68px !important;
+    object-fit:contain !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+  .nav.scrolled .nav-logo img,
+  body .nav-logo img{
+    filter:none !important;
+  }
+  .hero-logo-img{
+    width:170px !important;
+    height:auto !important;
+  }
+  @media (max-width:768px){
+    .nav-logo img{
+      width:128px !important;
+      max-height:62px !important;
+    }
+    .hero-logo-img{
+      width:148px !important;
+    }
+  }
+  @media (max-width:480px){
+    .nav-logo img{
+      width:118px !important;
+      max-height:58px !important;
+    }
+  }
+</style>
+</head>
 <body>
 <!-- ═══════════════════════
      NAVEGACIÓN
