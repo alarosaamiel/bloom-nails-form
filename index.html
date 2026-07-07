@@ -14,6 +14,9 @@
 <meta name="author" content="Bloom Nails Spa">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#bf9270">
+<meta name="bloom-version" content="3.3 Marketing Tracking Edition">
+<!-- Google Search Console: replace CONTENT_HERE with the verification token if you choose HTML tag verification. -->
+<meta name="google-site-verification" content="CONTENT_HERE">
 <link rel="canonical" href="https://bloomnailssalon.com/">
 <!-- Icons / PWA -->
 <link rel="manifest" href="/assets/manifest.json">
@@ -24,14 +27,54 @@
 <meta name="apple-mobile-web-app-title" content="Bloom Nails Spa">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-<!-- Analytics placeholders: replace IDs when accounts are created -->
-<!-- Google Tag Manager: replace GTM-XXXXXXX and uncomment both GTM snippets. -->
-<!--
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- =========================
+     Analytics / Marketing
+========================= -->
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+})(window,document,'script','dataLayer','GTM-TFHLNXBX');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Analytics 4 direct tag.
+     GA4 ID: G-XG3P540G1B.
+     Keep this active until GA4 is fully managed inside GTM. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XG3P540G1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XG3P540G1B');
+</script>
+
+<!-- Microsoft Clarity placeholder.
+     Replace CLARITY_PROJECT_ID when you create the project. -->
+<!--
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+</script>
+-->
+
+<!-- Meta Pixel placeholder.
+     Replace META_PIXEL_ID when you create the pixel. -->
+<!--
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'META_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
 -->
 
 
@@ -73,6 +116,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "logo": "https://bloomnailssalon.com/assets/images/image_005_f586c7daede0.webp",
   "description": "No hacemos simplemente uñas. Creamos un momento para ti. Descubre una experiencia de belleza y bienestar en Miraflores.",
   "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "91",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Miraflores",
@@ -97,66 +147,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Dónde está ubicado Bloom Nails Spa?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Bloom Nails Spa está ubicado en Miraflores, Lima, Perú."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué servicios ofrece Bloom Nails Spa?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Ofrecemos manicure, pedicure, soft gel, rubber base, Gel X, polygel, nail art, lashes y brows."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo puedo reservar una cita?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Puedes reservar desde la web usando los botones de Reservar o WhatsApp."}
+    }
+  ]
+}
+</script>
+
 <!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <!-- Styles -->
 <!-- Data files (editable sin tocar el HTML) -->
 <style>
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('assets/fonts/font_001_8973d65ce70f.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 300;
-  font-display: swap;
-  src: url('assets/fonts/font_002_b931f0a45f9d.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('assets/fonts/font_003_8048ac209bec.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('assets/fonts/font_004_e48e58027030.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('assets/fonts/font_005_8197bf53615d.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('assets/fonts/font_006_4755701d1a52.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('assets/fonts/font_007_f94cffda1651.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Jost';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('assets/fonts/font_008_98dce4f076fe.woff2') format('woff2');
-}
 
 /* ═══════════════════════════════════════════════
    BLOOM NAILS SPA — Design System
@@ -3847,6 +3868,11 @@ body.editing .t-add-wrap { display: flex; }
 
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFHLNXBX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <!-- ═══════════════════════
      NAVEGACIÓN
      ═══════════════════════ -->
@@ -5965,28 +5991,113 @@ html{scroll-behavior:smooth;}
 
 
 <script>
-/* Bloom tracking layer: works with Google Tag Manager/GA4, Meta Pixel and Clarity after their IDs are configured. */
+/* Bloom V3.3 tracking layer.
+   Sends lightweight events to:
+   - Google Tag Manager / GA4 via dataLayer
+   - gtag direct GA4 fallback
+   - Meta Pixel when added later
+   - Microsoft Clarity when loaded through GTM
+*/
 (function(){
   window.dataLayer = window.dataLayer || [];
+
+  function cleanText(value){
+    return (value || '').toString().replace(/\s+/g,' ').trim().slice(0,140);
+  }
+
   function bloomTrack(eventName, params){
     params = params || {};
+    params.page_location = params.page_location || window.location.href;
+    params.page_title = params.page_title || document.title;
     try { window.dataLayer.push(Object.assign({event: eventName}, params)); } catch(e) {}
     try { if (typeof gtag === 'function') gtag('event', eventName, params); } catch(e) {}
     try { if (typeof fbq === 'function') fbq('trackCustom', eventName, params); } catch(e) {}
     try { if (typeof clarity === 'function') clarity('event', eventName); } catch(e) {}
   }
   window.bloomTrack = bloomTrack;
-  function labelFor(el){ return (el.getAttribute('aria-label') || el.innerText || el.textContent || el.href || '').trim().slice(0,120); }
+
+  function labelFor(el){
+    if(!el) return '';
+    return cleanText(el.getAttribute('aria-label') || el.getAttribute('title') || el.innerText || el.textContent || el.href || '');
+  }
+
+  function sectionFor(el){
+    var section = el && el.closest ? el.closest('section[id], footer[id], header[id], nav[id], [data-section]') : null;
+    return section ? (section.getAttribute('id') || section.getAttribute('data-section') || section.className || '').toString().slice(0,80) : '';
+  }
+
   document.addEventListener('click', function(e){
-    var el = e.target.closest('a, button');
+    var el = e.target.closest && e.target.closest('a, button, summary, [role="button"], input[type="submit"]');
     if(!el) return;
-    var href = (el.getAttribute('href') || '').toLowerCase();
-    var txt = labelFor(el).toLowerCase();
-    if(href.indexOf('wa.me')>-1 || href.indexOf('whatsapp')>-1 || txt.indexOf('whatsapp')>-1){ bloomTrack('click_whatsapp', {label: labelFor(el)}); }
-    if(txt.indexOf('reserv')>-1 || href.indexOf('reserv')>-1){ bloomTrack('click_reservar', {label: labelFor(el)}); }
-    if(txt.indexOf('trabaja')>-1 || txt.indexOf('únete')>-1 || txt.indexOf('unete')>-1){ bloomTrack('click_trabaja_con_nosotros', {label: labelFor(el)}); }
-    if(txt.indexOf('contacto')>-1 || href.indexOf('mailto:')>-1){ bloomTrack('click_contacto', {label: labelFor(el)}); }
+
+    var hrefRaw = el.getAttribute('href') || '';
+    var href = hrefRaw.toLowerCase();
+    var label = labelFor(el);
+    var txt = label.toLowerCase();
+    var section = sectionFor(el);
+    var payload = { label: label, link_url: hrefRaw, section: section };
+
+    if(href.indexOf('wa.me') > -1 || href.indexOf('whatsapp') > -1 || txt.indexOf('whatsapp') > -1){
+      bloomTrack('click_whatsapp', payload);
+      bloomTrack('conversion_reserva_intent', Object.assign({}, payload, {conversion_type:'whatsapp'}));
+    }
+    if(txt.indexOf('reserv') > -1 || href.indexOf('reserv') > -1){
+      bloomTrack('click_reservar', payload);
+    }
+    if(href.indexOf('instagram.com') > -1 || txt.indexOf('instagram') > -1){
+      bloomTrack('click_instagram', payload);
+    }
+    if(href.indexOf('tiktok.com') > -1 || txt.indexOf('tiktok') > -1){
+      bloomTrack('click_tiktok', payload);
+    }
+    if(href.indexOf('google.com/maps') > -1 || href.indexOf('maps.app.goo.gl') > -1 || txt.indexOf('map') > -1 || txt.indexOf('cómo llegar') > -1 || txt.indexOf('como llegar') > -1 || txt.indexOf('ubicación') > -1 || txt.indexOf('ubicacion') > -1){
+      bloomTrack('click_maps', payload);
+    }
+    if(href.indexOf('tel:') === 0){
+      bloomTrack('click_phone', payload);
+    }
+    if(href.indexOf('mailto:') === 0){
+      bloomTrack('click_email', payload);
+    }
+    if(txt.indexOf('trabaja') > -1 || txt.indexOf('únete') > -1 || txt.indexOf('unete') > -1){
+      bloomTrack('click_trabaja_con_nosotros', payload);
+    }
+    if(txt.indexOf('contacto') > -1 || section === 'contacto'){
+      bloomTrack('click_contacto', payload);
+    }
+    if(section.indexOf('promo') > -1 || txt.indexOf('promo') > -1 || txt.indexOf('oferta') > -1){
+      bloomTrack('click_promotion', payload);
+    }
+    if(section.indexOf('galeria') > -1 || txt.indexOf('galería') > -1 || txt.indexOf('galeria') > -1){
+      bloomTrack('click_gallery', payload);
+    }
+    if(txt.indexOf('reseña') > -1 || txt.indexOf('resena') > -1 || txt.indexOf('review') > -1){
+      bloomTrack('click_review', payload);
+    }
   }, {passive:true});
+
+  var sentScroll50 = false;
+  var sentScroll90 = false;
+  window.addEventListener('scroll', function(){
+    var scrollPercent = (window.scrollY + window.innerHeight) / Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+    if(!sentScroll50 && scrollPercent >= 0.50){ sentScroll50 = true; bloomTrack('scroll_50', {scroll_depth: 50}); }
+    if(!sentScroll90 && scrollPercent >= 0.90){ sentScroll90 = true; bloomTrack('scroll_90', {scroll_depth: 90}); }
+  }, {passive:true});
+
+  document.addEventListener('submit', function(e){
+    var form = e.target;
+    var label = cleanText(form.getAttribute('id') || form.getAttribute('name') || form.className || 'form');
+    bloomTrack('form_submit', {form_label: label});
+    if(label.toLowerCase().indexOf('trabaja') > -1 || label.toLowerCase().indexOf('unete') > -1){
+      bloomTrack('submit_job_form', {form_label: label});
+    } else {
+      bloomTrack('submit_contact_form', {form_label: label});
+    }
+  }, true);
+
+  window.addEventListener('load', function(){
+    bloomTrack('page_ready', {bloom_version:'3.3'});
+  });
 })();
 </script>
 
