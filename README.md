@@ -1,3 +1,10 @@
-Bloom Mobile Hero Logo Safe Fix
+# Bloom Nails Spa - Miraflores
 
-Ajusta el logo blanco del hero solo en mobile: menor tamaño, más espacio superior y sin recorte. No afecta desktop.
+Versión final para GitHub Pages con SEO, Open Graph, Twitter Cards, Schema.org Local Business, robots.txt y sitemap.xml.
+
+## Publicación
+Reemplazar estos archivos en el repositorio, hacer Commit to main y Push origin.
+
+## Vista previa al compartir
+Título: Bloom Nails Spa - Miraflores
+Descripción: No hacemos simplemente uñas. Creamos un momento para ti, con atención personalizada y artistas especializadas.
