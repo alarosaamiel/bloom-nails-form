@@ -3470,6 +3470,204 @@ body.editing .t-add-wrap { display: flex; }
     }
   }
 </style>
+
+<!-- BLOOM MOBILE HERO LOGO ADJUST FIX -->
+<style>
+  /* En mobile mantenemos el logo blanco del hero, pero más pequeño y equilibrado
+     para que no compita con el logo del header ni tape el título. */
+  @media (max-width: 768px){
+    .hero-logo-wrap{
+      display:block !important;
+      height:auto !important;
+      margin:0 auto 10px !important;
+      padding:0 !important;
+      opacity:1 !important;
+      visibility:visible !important;
+      transform:none !important;
+      animation:none !important;
+    }
+    .hero-logo-img{
+      width:96px !important;
+      max-width:24vw !important;
+      height:auto !important;
+      opacity:.92 !important;
+      filter:brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,.35)) !important;
+      margin:0 auto !important;
+    }
+    .hero-content{
+      padding-top:0 !important;
+      transform:translateY(-10px) !important;
+    }
+    .hero-eyebrow{
+      margin-top:0 !important;
+      margin-bottom:16px !important;
+      font-size:.62rem !important;
+      letter-spacing:.32em !important;
+    }
+    .hero-title{
+      font-size:clamp(2.9rem, 13vw, 4.7rem) !important;
+      line-height:.98 !important;
+      margin-bottom:24px !important;
+    }
+  }
+  @media (max-width: 390px){
+    .hero-logo-img{
+      width:82px !important;
+      max-width:22vw !important;
+    }
+    .hero-content{
+      transform:translateY(-8px) !important;
+    }
+    .hero-title{
+      font-size:clamp(2.65rem, 12.2vw, 4.2rem) !important;
+    }
+  }
+</style>
+
+
+<!-- BLOOM MOBILE HERO PREMIUM OPTIMIZATION -->
+<style>
+  /* Optimización integral SOLO para mobile: jerarquía del hero, logo, ubicación, título y botones. */
+  @media (max-width: 768px){
+    .nav{
+      min-height: 86px !important;
+      padding: 14px 22px !important;
+      background: rgba(253,252,251,.96) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border-bottom: 1px solid rgba(231,217,199,.35) !important;
+    }
+    .nav-logo img{
+      width: 112px !important;
+      max-height: 52px !important;
+      object-fit: contain !important;
+      filter: none !important;
+    }
+    .nav-burger{
+      width: 58px !important;
+      height: 58px !important;
+      background: rgba(253,252,251,.88) !important;
+      box-shadow: 0 8px 28px rgba(30,20,15,.10) !important;
+    }
+
+    .hero{
+      min-height: 650px !important;
+      height: calc(100svh - 86px) !important;
+      max-height: 760px !important;
+      align-items: center !important;
+      padding-top: 0 !important;
+    }
+    .hero-image{
+      background-position: center 28% !important;
+    }
+    .hero-bg::after{
+      background:
+        linear-gradient(to bottom, rgba(20,14,10,.44) 0%, rgba(20,14,10,.60) 48%, rgba(20,14,10,.72) 100%) !important;
+    }
+    .hero-content{
+      width: 100% !important;
+      max-width: 390px !important;
+      padding: 0 26px !important;
+      transform: translateY(-8px) !important;
+    }
+    .hero-logo-wrap{
+      display: block !important;
+      margin: 0 auto 18px !important;
+      padding: 0 !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      animation: none !important;
+    }
+    .hero-logo-img{
+      width: 82px !important;
+      max-width: 22vw !important;
+      height: auto !important;
+      margin: 0 auto !important;
+      opacity: .94 !important;
+      filter: brightness(0) invert(1) drop-shadow(0 2px 10px rgba(0,0,0,.38)) !important;
+    }
+    .hero-eyebrow{
+      margin: 0 auto 20px !important;
+      font-size: .56rem !important;
+      line-height: 1.45 !important;
+      letter-spacing: .30em !important;
+      color: #E8C97A !important;
+      text-shadow: 0 1px 10px rgba(0,0,0,.72) !important;
+    }
+    .hero-title{
+      max-width: 360px !important;
+      margin: 0 auto 28px !important;
+      font-size: clamp(3.05rem, 12.4vw, 4.55rem) !important;
+      line-height: .94 !important;
+      letter-spacing: .035em !important;
+      text-shadow: 0 2px 18px rgba(0,0,0,.55), 0 4px 36px rgba(0,0,0,.32) !important;
+    }
+    .hero-actions{
+      gap: 12px !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-top: 0 !important;
+    }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-ghost{
+      width: min(100%, 320px) !important;
+      min-height: 58px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 16px 24px !important;
+      font-size: .72rem !important;
+      letter-spacing: .25em !important;
+      border-radius: 999px !important;
+    }
+    .hero-actions .btn-primary{
+      box-shadow: 0 18px 36px rgba(184,145,115,.28) !important;
+    }
+    .hero-actions .btn-ghost{
+      background: rgba(255,255,255,.04) !important;
+      border-color: rgba(255,255,255,.58) !important;
+    }
+  }
+
+  @media (max-width: 390px){
+    .nav{ min-height: 78px !important; padding: 12px 18px !important; }
+    .nav-logo img{ width: 100px !important; max-height: 48px !important; }
+    .nav-burger{ width: 54px !important; height: 54px !important; }
+    .hero{
+      min-height: 610px !important;
+      height: calc(100svh - 78px) !important;
+    }
+    .hero-content{
+      max-width: 350px !important;
+      padding: 0 24px !important;
+      transform: translateY(-4px) !important;
+    }
+    .hero-logo-img{
+      width: 74px !important;
+      max-width: 21vw !important;
+    }
+    .hero-eyebrow{
+      margin-bottom: 16px !important;
+      font-size: .52rem !important;
+      letter-spacing: .26em !important;
+    }
+    .hero-title{
+      font-size: clamp(2.78rem, 12vw, 4.08rem) !important;
+      line-height: .95 !important;
+      margin-bottom: 22px !important;
+    }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-ghost{
+      width: min(100%, 294px) !important;
+      min-height: 54px !important;
+      font-size: .66rem !important;
+      letter-spacing: .22em !important;
+    }
+  }
+</style>
+
 </head>
 <body>
 <!-- ═══════════════════════
