@@ -49,3 +49,22 @@ Incluye la versión lista para GitHub Pages con:
 - Crear Meta Pixel y agregarlo desde Google Tag Manager.
 - Crear Google Search Console y verificar dominio.
 - Crear dashboard en Looker Studio con GA4.
+
+
+## Bloom V4.0 Marketing Intelligence
+
+Incluye capa de tracking para GA4/GTM/Clarity/Meta Pixel:
+- clics en WhatsApp, Reservar, Instagram, Maps, teléfono, email, reseñas, promociones y galería
+- view_section para secciones visitadas
+- view_service, view_promotion y view_testimonial
+- scroll_depth (25/50/75/90/100, como parámetro de un mismo evento)
+- video_progress (25/50/75%) y video_start / video_complete
+- engaged_time a los 30/60/120/180/300 segundos
+- form_start y form_submit
+- Los clics de administración (modo edición de galería/promos/testimonios) quedan excluidos del tracking para no contaminar los datos con actividad interna.
+
+Conversión sugerida en GA4 (marcar como evento clave):
+- `conversion_reserva_intent` — único evento de conversión "canónico". Se dispara con cualquier clic a WhatsApp con intención de reservar, venga de una promo, servicio o experiencia.
+- `submit_job_form` — postulación de trabajo enviada con éxito.
+
+`click_whatsapp`, `click_reservar`, `click_promotion`, etc. son eventos de **diagnóstico** (para saber por dónde entra la gente) y no deben marcarse como conversión — ya están representados dentro de `conversion_reserva_intent` para ese mismo clic, y marcarlos también duplicaría el conteo total de conversiones en los reportes de GA4.
