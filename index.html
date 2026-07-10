@@ -8,9 +8,9 @@
 <!-- =========================
      SEO
 ========================= -->
-<title>Bloom Nails Spa - Miraflores | Manicure, Pedicure, Lashes &amp; Brows</title>
+<title>Bloom Nails Spa - Miraflores | Manicure &amp; Pedicure</title>
 <meta name="description" content="No hacemos simplemente uñas. Creamos un momento para ti. Descubre una experiencia de belleza y bienestar en Miraflores.">
-<meta name="keywords" content="Bloom Nails Spa, Bloom Nails Miraflores, Bloom Nails, manicure miraflores, pedicure miraflores, nails miraflores, nail salon miraflores, nail salon lima, nails spa, uñas miraflores, manicure lima, pedicure lima, gel x, soft gel, rubber base, polygel, nail art, french manicure, lashes, brows, cejas, pestañas, beauty salon miraflores">
+<meta name="keywords" content="Bloom Nails Spa, Bloom Nails Miraflores, Bloom Nails, manicure miraflores, pedicure miraflores, nails miraflores, nail salon miraflores, nail salon lima, nails spa, uñas miraflores, manicure lima, pedicure lima, gel x, soft gel, rubber base, polygel, nail art, french manicure, beauty salon miraflores">
 <meta name="author" content="Bloom Nails Spa">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#bf9270">
@@ -138,9 +138,7 @@ fbq('track', 'PageView');
   ],
   "makesOffer": [
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Manicure"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pedicure"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lashes"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brows"}}
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pedicure"}}
   ]
 }
 </script>
@@ -158,7 +156,7 @@ fbq('track', 'PageView');
     {
       "@type": "Question",
       "name": "¿Qué servicios ofrece Bloom Nails Spa?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Ofrecemos manicure, pedicure, soft gel, rubber base, Gel X, polygel, nail art, lashes y brows."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Ofrecemos manicure, pedicure, soft gel, rubber base, Gel X, polygel y nail art."}
     },
     {
       "@type": "Question",
@@ -1150,7 +1148,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   transform: translateY(-1px);
 }
 .servicios-grid-compact { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; }
-.servicios-grid-lashes { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 1120px; }
 .servicios-subtitle {
   text-align: center;
   color: #d6ad7b;
@@ -1160,19 +1157,14 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-size: .82rem;
   margin: 0 0 28px;
 }
-.brows-title { margin-top: 54px; }
 .servicios-tabs .whatsapp-float { z-index: 3; }
-@media (max-width: 1024px) {
-  .servicios-grid-lashes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 @media (max-width: 768px) {
   .servicios-tabs { padding: 84px 20px 96px; }
   .servicios-tabs-wrap { width: 100%; flex-direction: column; }
   .servicio-tab { width: 100%; border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.22); }
   .servicio-tab:last-child { border-bottom: 0; }
   .servicios-grid-tabs,
-  .servicios-grid-compact,
-  .servicios-grid-lashes { grid-template-columns: 1fr; }
+  .servicios-grid-compact { grid-template-columns: 1fr; }
   .servicios-grid-tabs .servicio-card { padding: 30px 24px; }
 }
 /* ═══════════════════════════════
@@ -2341,19 +2333,19 @@ const PROMOCIONES = [
   },
   {
     id: 3,
-    titulo: "Lifting de Pesta\u00f1a + Laminado de Ceja",
-    descripcion: "Define tu mirada con lifting de pesta\u00f1as y laminado de cejas en una sola sesi\u00f3n. Resultados naturales y duraderos.",
+    titulo: "Manicure Rubber + Pedicure Gel",
+    descripcion: "Manicure con base rubber para mayor adherencia y acabado impecable, combinado con pedicure en gel de larga duraci\u00f3n.",
     etiqueta: "Especial",
     vigencia: "Reserva con anticipaci\u00f3n",
-    whatsapp: "Hola Bloom! Me interesa la promo Lifting de Pesta\u00f1a + Laminado de Ceja \u2728"
+    whatsapp: "Hola Bloom! Me interesa la promo Manicure Rubber + Pedicure Gel \uD83D\uDC85"
   },
   {
     id: 4,
-    titulo: "Extensiones de Pesta\u00f1a + Laminado de Ceja",
-    descripcion: "Extensiones de pesta\u00f1as profesionales combinadas con laminado de cejas. Una mirada completa y sofisticada.",
+    titulo: "Manicure Gel + Dise\u00f1o",
+    descripcion: "Esmaltado semipermanente en gel con dise\u00f1o personalizado de nail art. Un acabado \u00fanico con la duraci\u00f3n que buscas.",
     etiqueta: "Exclusivo",
     vigencia: "Reserva con anticipaci\u00f3n",
-    whatsapp: "Hola Bloom! Me interesa la promo Extensiones de Pesta\u00f1a + Laminado de Ceja \u2728"
+    whatsapp: "Hola Bloom! Me interesa la promo Manicure Gel + Dise\u00f1o \uD83D\uDC85"
   }
 ];
 
@@ -3884,7 +3876,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="nav-dropdown-trigger" href="#promociones">Ofertas ▾</a>
 <ul class="nav-submenu">
 <li><a href="#promociones">Promos</a></li>
-<li><a href="#bloom-experiences-packages">Experiences</a></li>
 </ul>
 </li>
 <li><a href="#mujeres">Bloom eres tú</a></li>
@@ -3900,7 +3891,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="#servicios" onclick="return window.bloomMenuGo &amp;&amp; window.bloomMenuGo(this.getAttribute('href'));">Servicios</a>
 <a href="#galeria" onclick="return window.bloomMenuGo &amp;&amp; window.bloomMenuGo(this.getAttribute('href'));">Galería</a>
 <a href="#promociones" onclick="return window.bloomMenuGo &amp;&amp; window.bloomMenuGo(this.getAttribute('href'));">Promos</a>
-<a href="#bloom-experiences-packages" onclick="return window.bloomMenuGo &amp;&amp; window.bloomMenuGo(this.getAttribute('href'));">Experiences</a>
 <a href="#mujeres" onclick="return window.bloomMenuGo &amp;&amp; window.bloomMenuGo(this.getAttribute('href'));">Bloom eres tú</a>
 <a href="#momentos" onclick="return window.bloomMenuGo &amp;&amp; window.bloomMenuGo(this.getAttribute('href'));">Tu momento</a>
 <a href="#testimonios" onclick="return window.bloomMenuGo &amp;&amp; window.bloomMenuGo(this.getAttribute('href'));">Lo que dicen</a>
@@ -3934,7 +3924,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="hero-logo-wrap">
 <img alt="Bloom Nails Spa" class="hero-logo-img" src="assets/images/image_005_f586c7daede0.webp"/>
 </div>
-<p class="hero-eyebrow">Miraflores · Lima · Perú</p>
+<p class="hero-eyebrow">Salón de Manicure y Pedicure · Miraflores · Lima · Perú</p>
 <h1 class="hero-title">
       Donde la belleza<br/>
 <em>florece</em> con cada detalle.
@@ -4192,9 +4182,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div aria-label="Categorías de servicios Bloom" class="servicios-tabs-wrap reveal reveal-delay-2" role="tablist">
 <button class="servicio-tab active" data-tab="manicure" onclick="return window.bloomSwitchService &amp;&amp; window.bloomSwitchService('manicure');" role="tab" type="button">Manicure</button>
 <button class="servicio-tab" data-tab="pedicure" onclick="return window.bloomSwitchService &amp;&amp; window.bloomSwitchService('pedicure');" role="tab" type="button">Pedicure</button>
-<button class="servicio-tab" data-tab="lashes" onclick="return window.bloomSwitchService &amp;&amp; window.bloomSwitchService('lashes');" role="tab" type="button">Lashes</button>
-<button class="servicio-tab" data-tab="brows" onclick="return window.bloomSwitchService &amp;&amp; window.bloomSwitchService('brows');" role="tab" type="button">Brows</button>
-<button class="servicio-tab" data-tab="depilacion" onclick="return window.bloomSwitchService &amp;&amp; window.bloomSwitchService('depilacion');" role="tab" type="button">Depilación Facial</button>
 </div>
 <div class="servicios-panels">
 <div class="servicios-panel active bloom-active-panel" data-panel="manicure">
@@ -4228,42 +4215,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="servicios-grid servicios-grid-tabs">
 <div class="servicio-card reveal"><span class="servicio-code">P1</span><div class="servicio-info"><p class="servicio-name">Pedicure Clásico</p><p class="servicio-desc">Exfoliación, cutícula y esmaltado de pies.</p><p class="servicio-extra">Nuestros servicios incluyen exfoliación, masaje y nutrición profunda.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Pedicure%20Cl%C3%A1sico%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
 <div class="servicio-card reveal reveal-delay-1"><span class="servicio-code">P2</span><div class="servicio-info"><p class="servicio-name">Pedicure Gel</p><p class="servicio-desc">Esmaltado en gel duradero para pies.</p><p class="servicio-extra">Nuestros servicios incluyen exfoliación, masaje y nutrición profunda.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Pedicure%20Gel%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-</div>
-</div>
-<div class="servicios-panel" data-panel="lashes">
-<p class="servicios-subtitle">Lashes</p>
-<div class="servicios-grid servicios-grid-tabs">
-<div class="servicio-card reveal"><div class="servicio-info"><p class="servicio-name">Lifting</p><p class="servicio-desc">Rizado natural y duradero de pestañas.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Lifting%20de%20pesta%C3%B1as%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-1"><div class="servicio-info"><p class="servicio-name">Lifting + Botox</p><p class="servicio-desc">Lifting con tratamiento nutritivo.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Lifting%20%2B%20Botox%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-2"><div class="servicio-info"><p class="servicio-name">Lifting + Tinturado</p><p class="servicio-desc">Lifting más color oscuro intenso.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Lifting%20%2B%20Tinturado%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal"><div class="servicio-info"><p class="servicio-name">Extensiones Clásicas</p><p class="servicio-desc">Una extensión por pestaña natural.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20Cl%C3%A1sicas%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-1"><div class="servicio-info"><p class="servicio-name">Extensiones Volumen 3D</p><p class="servicio-desc">Abanico de 3 fibras por pestaña.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20Volumen%203D%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-2"><div class="servicio-info"><p class="servicio-name">Extensiones Rímel</p><p class="servicio-desc">Efecto rímel natural y definido.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20R%C3%ADmel%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal"><div class="servicio-info"><p class="servicio-name">Extensiones Volumen 4D</p><p class="servicio-desc">Mayor densidad y glamour.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20Volumen%204D%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-1"><div class="servicio-info"><p class="servicio-name">Extensiones Hawaianas</p><p class="servicio-desc">Degradado de colores tropicales.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20Hawaianas%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-2"><div class="servicio-info"><p class="servicio-name">Extensiones Anime</p><p class="servicio-desc">Estilo gráfico inspirado en anime.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20Anime%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal"><div class="servicio-info"><p class="servicio-name">Extensiones Volumen 7D</p><p class="servicio-desc">Volumen máximo y ultra dramático.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20Volumen%207D%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-1"><div class="servicio-info"><p class="servicio-name">Extensiones Whispy</p><p class="servicio-desc">Puntas abiertas para efecto pluma.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20Whispy%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-2"><div class="servicio-info"><p class="servicio-name">Extensiones Fox Eye</p><p class="servicio-desc">Alargamiento hacia las comisuras.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Extensiones%20Fox%20Eye%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-</div>
-</div>
-<div class="servicios-panel" data-panel="brows">
-<p class="servicios-subtitle">Brows</p>
-<div class="servicios-grid servicios-grid-tabs">
-<div class="servicio-card reveal"><div class="servicio-info"><p class="servicio-name">Visagismo</p><p class="servicio-desc">Diseño personalizado según tu rostro.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Visagismo%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-1"><div class="servicio-info"><p class="servicio-name">Tinturado con Henna</p><p class="servicio-desc">Color natural y nutritivo para cejas.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Tinturado%20con%20Henna%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-2"><div class="servicio-info"><p class="servicio-name">Laminado de Ceja</p><p class="servicio-desc">Fija y peína las cejas hacia arriba.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Laminado%20de%20Ceja%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-3"><div class="servicio-info"><p class="servicio-name">Tinte de Cejas</p><p class="servicio-desc">Definición y color duradero.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Tinte%20de%20Cejas%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-</div>
-</div>
-<div class="servicios-panel" data-panel="depilacion">
-<p class="servicios-subtitle">Depilación Facial</p>
-<div class="servicios-grid servicios-grid-tabs">
-<div class="servicio-card reveal"><div class="servicio-info"><p class="servicio-name">Depilación Facial</p><p class="servicio-desc">Retiro de vello facial completo.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Depilaci%C3%B3n%20Facial%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-1"><div class="servicio-info"><p class="servicio-name">Depilación de Ceja</p><p class="servicio-desc">Definición y arco perfecto.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Depilaci%C3%B3n%20de%20Ceja%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-2"><div class="servicio-info"><p class="servicio-name">Depilación Nasal</p><p class="servicio-desc">Retiro de vello nasal con cera.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Depilaci%C3%B3n%20Nasal%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-3"><div class="servicio-info"><p class="servicio-name">Depilación de Patilla</p><p class="servicio-desc">Definición lateral del rostro.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Depilaci%C3%B3n%20de%20Patilla%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
-<div class="servicio-card reveal reveal-delay-4"><div class="servicio-info"><p class="servicio-name">Depilación de Bozo</p><p class="servicio-desc">Zona superior del labio.</p><a class="servicio-cta" href="https://wa.me/51938578189?text=Hola%20Bloom!%20Quiero%20reservar%20Depilaci%C3%B3n%20de%20Bozo%20%F0%9F%92%85" target="_blank">Reservar</a></div><span class="servicio-arrow">↗</span></div>
 </div>
 </div>
 </div>
@@ -4447,42 +4398,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="27">
-<button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Negro y marrón natural Bloom" loading="lazy" src="assets/images/image_033_c03c0a5cdf04.webp"/>
-<div class="g-caption"><span>Lashes</span><strong>Negro y marrón natural</strong></div>
-<button class="g-edit-btn" title="Cambiar foto">✎</button>
-<button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
-</article>
-<article class="g-card" data-idx="28">
-<button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Extensión de cejas Bloom" loading="lazy" src="assets/images/image_034_a813b36c783a.webp"/>
-<div class="g-caption"><span>Brows</span><strong>Extensión de cejas</strong></div>
-<button class="g-edit-btn" title="Cambiar foto">✎</button>
-<button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
-</article>
-<article class="g-card" data-idx="29">
-<button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Antes y después Bloom" loading="lazy" src="assets/images/image_035_3e07d07a8f1e.webp"/>
-<div class="g-caption"><span>Lashes</span><strong>Antes y después</strong></div>
-<button class="g-edit-btn" title="Cambiar foto">✎</button>
-<button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
-</article>
-<article class="g-card" data-idx="30">
-<button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Lashes y cejas Bloom" loading="lazy" src="assets/images/image_036_185c28871024.webp"/>
-<div class="g-caption"><span>Lashes &amp; Brows</span><strong>Lashes y cejas</strong></div>
-<button class="g-edit-btn" title="Cambiar foto">✎</button>
-<button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
-</article>
-<article class="g-card" data-idx="31">
-<button class="g-del-btn" title="Eliminar foto">✕</button>
-<img alt="Lashes y brows Bloom" loading="lazy" src="assets/images/image_037_76c1cda202d4.webp"/>
-<div class="g-caption"><span>Lashes &amp; Brows</span><strong>Lashes y brows</strong></div>
-<button class="g-edit-btn" title="Cambiar foto">✎</button>
-<button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
-</article>
 </div>
+
 <div class="galeria-track-arrows">
 <button class="galeria-arrow" id="galeriaPrev">←</button>
 <button class="galeria-arrow" id="galeriaNext">→</button>
@@ -4518,23 +4435,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="promo-card visible" data-static-promo="true">
 <span class="promo-tag">Especial</span>
-<h3 class="promo-name">Lifting de Pestaña + Laminado de Ceja</h3>
-<p class="promo-desc">Define tu mirada con lifting de pestañas y laminado de cejas en una sola sesión. Resultados naturales y duraderos.</p>
+<h3 class="promo-name">Manicure Rubber + Pedicure Gel</h3>
+<p class="promo-desc">Manicure con base rubber para mayor adherencia y acabado impecable, combinado con pedicure en gel de larga duración.</p>
 <p class="promo-validity">⏱ Reserva con anticipación</p>
-<a class="btn-promo" href="https://wa.me/51938578189?text=Hola Bloom! Me interesa la promo Lifting de Pestaña + Laminado de Ceja ✨" target="_blank">Reservar esta promo</a>
+<a class="btn-promo" href="https://wa.me/51938578189?text=Hola Bloom! Me interesa la promo Manicure Rubber + Pedicure Gel 💅" target="_blank">Reservar esta promo</a>
 </div>
 <div class="promo-card visible" data-static-promo="true">
 <span class="promo-tag">Exclusivo</span>
-<h3 class="promo-name">Extensiones de Pestaña + Laminado de Ceja</h3>
-<p class="promo-desc">Extensiones de pestañas profesionales combinadas con laminado de cejas. Una mirada completa y sofisticada.</p>
+<h3 class="promo-name">Manicure Gel + Diseño</h3>
+<p class="promo-desc">Esmaltado semipermanente en gel con diseño personalizado de nail art. Un acabado único con la duración que buscas.</p>
 <p class="promo-validity">⏱ Reserva con anticipación</p>
-<a class="btn-promo" href="https://wa.me/51938578189?text=Hola Bloom! Me interesa la promo Extensiones de Pestaña + Laminado de Ceja ✨" target="_blank">Reservar esta promo</a>
+<a class="btn-promo" href="https://wa.me/51938578189?text=Hola Bloom! Me interesa la promo Manicure Gel + Diseño 💅" target="_blank">Reservar esta promo</a>
 </div></div>
 </section>
 <!-- ═══════════════════════
-     BLOOM EXPERIENCES
+     BLOOM EXPERIENCES (oculto temporalmente a pedido — contenido intacto para reactivar en el futuro)
      ═══════════════════════ -->
-<section class="bloom-experiences" id="bloom-experiences-packages">
+<section class="bloom-experiences" id="bloom-experiences-packages" style="display:none;">
 <div class="section-header">
 <p class="section-eyebrow reveal">Momentos únicos</p>
 <h2 class="section-title reveal reveal-delay-1">Bloom <em>Experiences</em></h2>
@@ -4568,8 +4485,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Manicure y Pedicure</li>
 <li>Copa de espumante de bienvenida</li>
 <li>Decoración floral exclusiva</li>
-<li>Depilación facial</li>
-<li>Laminado de ceja</li>
 <li>Velo de novia</li>
 <li class="opcional">Opcional: Manicure para damas (costo adicional)</li>
 </ul>
@@ -4827,7 +4742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="section-title reveal reveal-delay-1">Trabaja <em>con nosotros</em></h2>
 </div>
 <p class="trabaja-intro reveal reveal-delay-2">
-      ¿Eres especialista en uñas, lashes o brows y buscas un espacio donde crecer? 
+      ¿Eres especialista en uñas y buscas un espacio donde crecer? 
       En Bloom valoramos el talento y la dedicación. Cuéntanos sobre ti.
     </p>
 <form class="trabaja-form reveal reveal-delay-2" id="trabajaForm">
@@ -5047,7 +4962,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="g-hint" id="gHint">Editor desbloqueado</div>
 <div class="g-modal" id="gModal"><div class="g-mbox">
 <h3>Detalles de la foto</h3>
-<select id="gCat"><option value="Unas">Unas</option><option value="Nail Art">Nail Art</option><option value="Lashes">Lashes</option><option value="Cejas">Cejas</option></select>
+<select id="gCat"><option value="Unas">Unas</option><option value="Nail Art">Nail Art</option></select>
 <input id="gLabel" placeholder="Nombre del diseno" type="text"/>
 <div class="g-macts"><button class="g-mcancel" id="gMcancel">Cancelar</button><button class="g-mok" id="gMok">Confirmar</button></div>
 </div></div>
