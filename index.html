@@ -1322,11 +1322,16 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .galeria{padding:120px 48px;background:var(--marfil);}
 .galeria-intro{font-family:var(--font-body);font-size:1rem;color:var(--grafito-dim);margin-top:12px;}
 .galeria-track-wrap{position:relative;margin:56px 0 32px;}
-.g-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 4px 24px;-webkit-overflow-scrolling:touch;cursor:grab;}
-.g-track:active{cursor:grabbing;}
-.g-track::-webkit-scrollbar{height:5px;}
-.g-track::-webkit-scrollbar-thumb{background:var(--champagne);border-radius:100px;}
-.g-card{flex:0 0 auto;width:260px;aspect-ratio:3/4;border-radius:var(--radius-md);overflow:hidden;position:relative;scroll-snap-align:start;cursor:pointer;transition:transform 0.4s var(--ease-bloom);}
+.g-track{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:8px 4px 24px;}
+.g-card{aspect-ratio:3/4;border-radius:var(--radius-md);overflow:hidden;position:relative;cursor:pointer;transition:transform 0.4s var(--ease-bloom);}
+.g-card.g-extra{display:none;}
+.g-track.g-show-all .g-card.g-extra{display:block;}
+.g-showmore-wrap{display:flex;justify-content:center;margin-top:8px;}
+.g-showmore-btn{font-family:var(--font-body);font-size:.85rem;letter-spacing:.06em;padding:14px 36px;border-radius:100px;border:1px solid var(--champagne);background:var(--blanco);color:var(--grafito);cursor:pointer;transition:all 0.3s var(--ease-bloom);}
+.g-showmore-btn:hover{background:var(--grafito);border-color:var(--grafito);color:var(--blanco);}
+.g-track.g-show-all ~ .g-showmore-wrap{display:none;}
+@media(min-width:640px){.g-track{grid-template-columns:repeat(3,1fr);gap:18px;}}
+@media(min-width:1024px){.g-track{grid-template-columns:repeat(4,1fr);gap:20px;}}
 .g-card:hover{transform:scale(1.02);}
 .g-card:hover img{transform:scale(1.06);}
 .g-card:hover .g-caption{opacity:1;transform:translateY(0);}
@@ -1334,7 +1339,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .g-caption{position:absolute;bottom:0;left:0;right:0;padding:28px 16px 16px;background:linear-gradient(to top,rgba(30,20,15,.72),transparent);opacity:0;transform:translateY(6px);transition:all 0.4s var(--ease-bloom);}
 .g-caption span{display:block;font-family:var(--font-body);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:3px;}
 .g-caption strong{font-family:var(--font-display);font-style:italic;font-size:1.05rem;color:var(--blanco);}
-.galeria-track-arrows{display:flex;justify-content:center;gap:14px;margin-top:6px;}
+.galeria-track-arrows{display:none;}
 .galeria-arrow{width:42px;height:42px;border-radius:50%;border:1px solid var(--champagne);background:var(--blanco);color:var(--grafito);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s var(--ease-bloom);}
 .galeria-arrow:hover{background:var(--grafito);border-color:var(--grafito);color:var(--blanco);}
 /* Lightbox */
@@ -1376,8 +1381,7 @@ body.editing .g-card:hover{outline:2px dashed var(--oro);}
 .g-mok:hover{background:var(--madera);}
 .g-mcancel{padding:11px 20px;border:1px solid var(--champagne);background:none;color:var(--grafito-dim);border-radius:var(--radius-pill);font-family:var(--font-body);font-size:.82rem;cursor:pointer;}
 .g-hint{position:fixed;bottom:90px;right:24px;background:rgba(58,58,58,.85);color:rgba(255,255,255,.8);font-family:var(--font-body);font-size:.72rem;padding:7px 14px;border-radius:var(--radius-pill);z-index:7999;pointer-events:none;opacity:0;transition:opacity .5s;}
-@media(max-width:768px){.galeria{padding:80px 20px;}.g-card{width:200px;}.lb-nav{display:none;}}
-@media(max-width:480px){.g-card{width:175px;}}
+@media(max-width:768px){.galeria{padding:80px 20px;}.lb-nav{display:none;}}
 
 /* ═══════════════════════════════
    EXPERIENCIA (Proceso)
@@ -4180,78 +4184,100 @@ body.editing .t-add-wrap { display: flex; }
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="9">
+<article class="g-card g-extra" data-idx="9">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Uñas híbridas en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_018_0fc89b8f6f4d.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Híbrida</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="10">
+<article class="g-card g-extra" data-idx="10">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Diseño de uñas híbridas en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_019_9f72d12074f7.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Híbrida I</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="11">
+<article class="g-card g-extra" data-idx="11">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Kapping en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_020_efd55003b444.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Kapping</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="12">
+<article class="g-card g-extra" data-idx="12">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Uñas polygel en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_021_1af76c80112a.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Polygel</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="13">
+<article class="g-card g-extra" data-idx="13">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Diseño de uñas polygel en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_022_43319ec722a4.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Polygel II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="14">
+<article class="g-card g-extra" data-idx="14">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Rubber base en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_023_6b9632ef12ef.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Rubber base</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="15">
+<article class="g-card g-extra" data-idx="15">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Uñas rubber base en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_024_41d7d957877e.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Rubber base II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="16">
+<article class="g-card g-extra" data-idx="16">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Soft gel en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_025_b1d986794f33.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Soft gel</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="17">
+<article class="g-card g-extra" data-idx="17">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Uñas soft gel en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_026_e85a939efcb7.webp"/>
 <div class="g-caption"><span>Manicure</span><strong>Soft gel II</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
-<article class="g-card" data-idx="21">
+<article class="g-card g-extra" data-idx="21">
 <button class="g-del-btn" title="Eliminar foto">✕</button>
 <img alt="Pedicure clásica en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_027_f91c1238fc67.webp"/>
 <div class="g-caption"><span>Pedicure</span><strong>Pedicure clásica</strong></div>
 <button class="g-edit-btn" title="Cambiar foto">✎</button>
 <button class="g-ren-btn" title="Editar nombre">✎ Nombre</button>
 </article>
+<article class="g-card g-extra" data-idx="22"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas rojas elegantes en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_061_103495da31c2.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 1</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="23"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas nude en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_062_5c7138ac5b09.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 2</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="24"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas rosado y rojo en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_063_ab214463af5a.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 3</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="25"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas nude cortas en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_064_4989bcd3859b.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 4</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="26"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas nude con detalles dorados en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_065_0de2c91b2dba.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 5</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="27"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas rosa pastel en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_066_3484907b74f7.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 6</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="28"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas blancas afrancesadas en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_067_f9f776f773b9.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 7</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="29"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas blancas con detalle dorado en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_068_2e67446c95ee.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 8</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="30"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas pastel en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_069_3ef95a275697.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 9</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="31"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas rojas brillantes en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_070_6be60f247f23.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 10</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="32"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas nude con brillos en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_071_2540aa4b1157.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 11</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="33"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas en tono marrón en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_072_d1f3b167c91a.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 12</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="34"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas blancas cremosas en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_073_d275cb191255.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 13</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="35"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas rojas almendra en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_074_da8e6cdf7c47.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 14</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="36"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas rosa con arte en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_075_05ec48c47447.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 15</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="37"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas nude mate en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_076_a790c6aac21f.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 16</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="38"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas rosa claro en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_077_dae7b904e495.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 17</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="39"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas negras con dorado en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_078_34bfca222596.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 18</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
+<article class="g-card g-extra" data-idx="40"><button class="g-del-btn" title="Eliminar foto">✕</button><img alt="Diseño de uñas rojas cortas en Miraflores - Bloom Nails Spa" loading="lazy" src="assets/images/image_079_c700a789af65.webp"/><div class="g-caption"><span>Diseños Bloom</span><strong>Miraflores 19</strong></div><button class="g-edit-btn" title="Cambiar foto">✎</button><button class="g-ren-btn" title="Editar nombre">✎ Nombre</button></article>
 </div>
 
+<div class="g-showmore-wrap" id="gShowMoreWrap">
+<button class="g-showmore-btn" id="gShowMoreBtn">+ Ver más diseños</button>
+</div>
 <div class="galeria-track-arrows">
 <button class="galeria-arrow" id="galeriaPrev">←</button>
 <button class="galeria-arrow" id="galeriaNext">→</button>
@@ -4927,6 +4953,10 @@ document.addEventListener('DOMContentLoaded', () => {
   var gTrack=qs('galeriaTrack');
   if(qs('galeriaPrev'))qs('galeriaPrev').addEventListener('click',function(){gTrack&&gTrack.scrollBy({left:-280,behavior:'smooth'});});
   if(qs('galeriaNext'))qs('galeriaNext').addEventListener('click',function(){gTrack&&gTrack.scrollBy({left:280,behavior:'smooth'});});
+  if(qs('gShowMoreBtn'))qs('gShowMoreBtn').addEventListener('click',function(){
+    if(gTrack)gTrack.classList.add('g-show-all');
+    var wrap=qs('gShowMoreWrap');if(wrap)wrap.style.display='none';
+  });
   if(gTrack){
     var dn=false,sx=0,sl=0;
     gTrack.addEventListener('mousedown',function(e){dn=true;sx=e.pageX-gTrack.offsetLeft;sl=gTrack.scrollLeft;});
