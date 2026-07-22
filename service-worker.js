@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bloom-v3-20260713';
+const CACHE_NAME = 'bloom-v4-20260722';
 const CORE_ASSETS = ['/', '/index.html', '/assets/manifest.json', '/og-image.jpg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_ASSETS)).then(() => self.skipWaiting()));
