@@ -1841,6 +1841,16 @@ body.editing .g-mv-btn{display:flex;}
   color: rgba(255,255,255,0.2);
   letter-spacing: 0.15em;
 }
+.footer-legal-link {
+  color: rgba(255,255,255,0.45);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.footer-legal-link:hover {
+  color: rgba(255,255,255,0.8);
+}
 
 /* ═══════════════════════════════
    WHATSAPP FLOTANTE
@@ -4854,6 +4864,99 @@ body.editing .t-add-wrap { display: flex; }
 </div>
 </section>
 <!-- ═══════════════════════
+     LIBRO DE RECLAMACIONES (INDECOPI)
+     ═══════════════════════ -->
+<div class="promo-modal" id="reclamoModal">
+<div class="promo-mbox" style="width:min(640px,94vw);">
+<h3>Libro de Reclamaciones</h3>
+<p style="font-family:var(--font-body);font-size:.8rem;color:var(--grafito-dim);margin-top:-8px;">Hoja de Reclamación Virtual — Conforme al Código de Protección y Defensa del Consumidor.</p>
+
+<div style="background:var(--marfil);border:1px solid var(--champagne);border-radius:var(--radius-sm);padding:14px 16px;font-family:var(--font-body);font-size:.78rem;color:var(--grafito-dim);line-height:1.7;">
+  <strong style="color:var(--grafito);">Proveedor:</strong> Corporación Laleco S.A.C.<br>
+  <strong style="color:var(--grafito);">RUC:</strong> 20602077706<br>
+  <strong style="color:var(--grafito);">Domicilio:</strong> Av. El Carmen 503, Urb. San Roque, Surco
+</div>
+
+<p style="font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grafito-dim);margin:4px 0 0;">1. Identificación del consumidor reclamante</p>
+<div class="trabaja-row">
+<div class="trabaja-field">
+<label class="trabaja-label">Nombre completo *</label>
+<input class="trabaja-input" id="lr-nombre" placeholder="Tu nombre completo" required="" type="text">
+</div>
+<div class="trabaja-field">
+<label class="trabaja-label">DNI / CE *</label>
+<input class="trabaja-input" id="lr-dni" placeholder="Documento de identidad" required="" type="text">
+</div>
+</div>
+<div class="trabaja-field">
+<label class="trabaja-label">Domicilio *</label>
+<input class="trabaja-input" id="lr-domicilio" placeholder="Tu dirección" required="" type="text">
+</div>
+<div class="trabaja-row">
+<div class="trabaja-field">
+<label class="trabaja-label">Teléfono *</label>
+<input class="trabaja-input" id="lr-telefono" placeholder="+51 999 999 999" required="" type="tel">
+</div>
+<div class="trabaja-field">
+<label class="trabaja-label">E-mail *</label>
+<input class="trabaja-input" id="lr-email" placeholder="tu@correo.com" required="" type="email">
+</div>
+</div>
+<div class="trabaja-field">
+<label class="trabaja-label">Si es menor de edad: nombre del padre, madre o apoderado</label>
+<input class="trabaja-input" id="lr-apoderado" placeholder="Opcional" type="text">
+</div>
+
+<p style="font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grafito-dim);margin:10px 0 0;">2. Identificación del bien contratado</p>
+<div class="trabaja-field">
+<label class="trabaja-label">Tipo</label>
+<div class="trabaja-radio-group" id="lr-tipobien-group">
+<label class="trabaja-radio-option"><input name="lr-tipobien" type="radio" value="Producto"> Producto</label>
+<label class="trabaja-radio-option"><input name="lr-tipobien" type="radio" value="Servicio"> Servicio</label>
+</div>
+</div>
+<div class="trabaja-row">
+<div class="trabaja-field">
+<label class="trabaja-label">Descripción del producto/servicio *</label>
+<input class="trabaja-input" id="lr-descripcion" placeholder="Ej: Manicure Gel, 12/08/2026" required="" type="text">
+</div>
+<div class="trabaja-field">
+<label class="trabaja-label">Monto reclamado</label>
+<input class="trabaja-input" id="lr-monto" placeholder="S/. (opcional)" type="text">
+</div>
+</div>
+
+<p style="font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--grafito-dim);margin:10px 0 0;">3. Detalle de la reclamación y pedido</p>
+<div class="trabaja-field">
+<label class="trabaja-label">¿Es un reclamo o una queja?</label>
+<div class="trabaja-radio-group" id="lr-tiporeclamo-group">
+<label class="trabaja-radio-option"><input name="lr-tiporeclamo" type="radio" value="Reclamo"> Reclamo</label>
+<label class="trabaja-radio-option"><input name="lr-tiporeclamo" type="radio" value="Queja"> Queja</label>
+</div>
+</div>
+<div class="trabaja-field">
+<label class="trabaja-label">Detalle *</label>
+<textarea class="trabaja-input" id="lr-detalle" placeholder="Describe lo sucedido" required="" rows="3"></textarea>
+</div>
+<div class="trabaja-field">
+<label class="trabaja-label">Pedido *</label>
+<textarea class="trabaja-input" id="lr-pedido" placeholder="¿Qué solución esperas?" required="" rows="3"></textarea>
+</div>
+
+<p style="font-family:var(--font-body);font-size:.68rem;color:var(--grafito-dim);line-height:1.6;margin-top:4px;">
+  La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI. El proveedor debe dar respuesta en un plazo no mayor a quince (15) días hábiles, improrrogable.
+</p>
+
+<div class="promo-macts">
+<button class="promo-mcancel" onclick="closeReclamoModal()" type="button">Cancelar</button>
+<button class="promo-mok" id="lr-submit-btn" onclick="enviarReclamo()" type="button">Enviar reclamación</button>
+</div>
+<div class="trabaja-success" id="lr-success" style="display:none;">
+  ¡Tu reclamación fue enviada! Te responderemos dentro del plazo establecido por ley. 🌸
+</div>
+</div>
+</div>
+<!-- ═══════════════════════
      FOOTER / CIERRE
      ═══════════════════════ -->
 <section aria-label="Salón de uñas en Miraflores" class="seo-local-bloom" id="seo-local-bloom">
@@ -4872,7 +4975,7 @@ body.editing .t-add-wrap { display: flex; }
       Reservar mi momento
     </a>
 </div>
-<p class="footer-bottom">© 2025 Bloom Nails Spa · Todos los derechos reservados</p>
+<p class="footer-bottom">© 2025 Bloom Nails Spa · Todos los derechos reservados · <a class="footer-legal-link" href="#" onclick="openReclamoModal(); return false;">Libro de Reclamaciones</a></p>
 </footer>
 <!-- ═══════════════════════
      WHATSAPP FLOTANTE
@@ -5410,6 +5513,90 @@ async function enviarPostulacion() {
 }
 
 // Estilo visual para radio buttons
+function openReclamoModal() {
+  document.getElementById('reclamoModal').classList.add('open');
+}
+function closeReclamoModal() {
+  document.getElementById('reclamoModal').classList.remove('open');
+}
+document.getElementById('reclamoModal').addEventListener('click', function(e) {
+  if (e.target === this) closeReclamoModal();
+});
+
+async function enviarReclamo() {
+  var nombre     = document.getElementById('lr-nombre').value.trim();
+  var dni        = document.getElementById('lr-dni').value.trim();
+  var domicilio  = document.getElementById('lr-domicilio').value.trim();
+  var telefono   = document.getElementById('lr-telefono').value.trim();
+  var email      = document.getElementById('lr-email').value.trim();
+  var apoderado  = document.getElementById('lr-apoderado').value.trim();
+  var tipoBienEl = document.querySelector('input[name="lr-tipobien"]:checked');
+  var descripcion= document.getElementById('lr-descripcion').value.trim();
+  var monto      = document.getElementById('lr-monto').value.trim();
+  var tipoRecEl  = document.querySelector('input[name="lr-tiporeclamo"]:checked');
+  var detalle    = document.getElementById('lr-detalle').value.trim();
+  var pedido     = document.getElementById('lr-pedido').value.trim();
+  var btn        = document.getElementById('lr-submit-btn');
+
+  if (!nombre)      { alert('Por favor ingresa tu nombre completo.'); return; }
+  if (!dni)         { alert('Por favor ingresa tu DNI o CE.'); return; }
+  if (!domicilio)   { alert('Por favor ingresa tu domicilio.'); return; }
+  if (!telefono)    { alert('Por favor ingresa tu teléfono.'); return; }
+  if (!email)       { alert('Por favor ingresa tu correo electrónico.'); return; }
+  if (!descripcion) { alert('Por favor describe el producto o servicio.'); return; }
+  if (!detalle)     { alert('Por favor describe el detalle de tu reclamación.'); return; }
+  if (!pedido)      { alert('Por favor indica tu pedido.'); return; }
+
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+
+  var fecha = new Date().toLocaleDateString('es-PE', { year: 'numeric', month: '2-digit', day: '2-digit' });
+
+  try {
+    var response = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject:        'Nuevo Reclamo/Queja — Libro de Reclamaciones — Bloom Nails Spa',
+        _replyto:        email,
+        formulario:      'Libro de Reclamaciones',
+        fecha:           fecha,
+        nombre:          nombre,
+        dni_ce:          dni,
+        domicilio:       domicilio,
+        telefono:        telefono,
+        email:           email,
+        apoderado:       apoderado || '(no aplica)',
+        tipo_bien:       tipoBienEl ? tipoBienEl.value : '(no especificado)',
+        descripcion:     descripcion,
+        monto_reclamado: monto || '(no especificado)',
+        tipo_reclamo:    tipoRecEl ? tipoRecEl.value : '(no especificado)',
+        detalle:         detalle,
+        pedido:          pedido
+      })
+    });
+
+    if (response.ok) {
+      document.querySelectorAll('#reclamoModal .trabaja-field, #reclamoModal .trabaja-row, #reclamoModal .promo-macts').forEach(function(el){ el.style.display = 'none'; });
+      document.getElementById('lr-success').style.display = 'block';
+      if (window.bloomTrack) {
+        window.bloomTrack('submit_reclamo_form', { form_label: 'reclamoModal' });
+      }
+    } else {
+      btn.textContent = 'Enviar reclamación';
+      btn.disabled = false;
+      alert('Hubo un error al enviar. Intenta de nuevo.');
+      if (window.bloomTrack) {
+        window.bloomTrack('error_form', { form_label: 'reclamoModal', reason: 'http_error', status: response.status });
+      }
+    }
+  } catch (err) {
+    btn.textContent = 'Enviar reclamación';
+    btn.disabled = false;
+    alert('Hubo un error al enviar. Intenta de nuevo.');
+  }
+}
+
 document.querySelectorAll('.trabaja-radio-option input[type="radio"]').forEach(function(radio) {
   radio.addEventListener('change', function() {
     var groupName = this.name;
