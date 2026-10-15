@@ -1,0 +1,220 @@
+{
+  "fotos": [
+    {
+      "imagen": "/assets/images/galeria/unas-rojo-intenso-miraflores.webp",
+      "titulo": "Rojo intenso",
+      "tecnica": "Manicure",
+      "descripcion_seo": "Manicure en gel rojo intenso en Miraflores - Bloom Nails Spa",
+      "ancho": 952,
+      "alto": 1200,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-francesa-almendra-miraflores.webp",
+      "titulo": "Francesa almendra",
+      "tecnica": "Manicure",
+      "descripcion_seo": "Uñas francesas almendradas en Miraflores - Bloom Nails Spa",
+      "ancho": 960,
+      "alto": 1088,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-rojo-con-detalles-miraflores.webp",
+      "titulo": "Rojo con detalles",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas rojas con nail art en Miraflores - Bloom Nails Spa",
+      "ancho": 960,
+      "alto": 1088,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-cromado-lila-miraflores.webp",
+      "titulo": "Cromado lila",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas cromadas lila en Miraflores - Bloom Nails Spa",
+      "ancho": 928,
+      "alto": 1152,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-manicure-y-pedicure-celeste-miraflores.webp",
+      "titulo": "Manicure y pedicure celeste",
+      "tecnica": "Pedicure",
+      "descripcion_seo": "Manicure y pedicure en gel celeste en Miraflores - Bloom Nails Spa",
+      "ancho": 947,
+      "alto": 1200,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-frances-con-flor-miraflores.webp",
+      "titulo": "Francés con flor",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas francesas amarillas con flor en relieve en Miraflores - Bloom Nails Spa",
+      "ancho": 896,
+      "alto": 1184,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-estrellas-doradas-miraflores.webp",
+      "titulo": "Estrellas doradas",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas nude con estrellas doradas en Miraflores - Bloom Nails Spa",
+      "ancho": 879,
+      "alto": 958,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-cromado-plata-miraflores.webp",
+      "titulo": "Cromado plata",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas cromadas plateadas en Miraflores - Bloom Nails Spa",
+      "ancho": 896,
+      "alto": 1184,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-dorado-artistico-miraflores.webp",
+      "titulo": "Dorado artístico",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Nail art dorado en Miraflores - Bloom Nails Spa",
+      "ancho": 949,
+      "alto": 999,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/image_027_f91c1238fc67.webp",
+      "titulo": "Pedicure clásica",
+      "tecnica": "Pedicure",
+      "descripcion_seo": "Pedicure clásica en Miraflores - Bloom Nails Spa",
+      "ancho": 720,
+      "alto": 900,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-perlado-aurora-miraflores.webp",
+      "titulo": "Perlado aurora",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas perladas efecto aurora en Miraflores - Bloom Nails Spa",
+      "ancho": 1088,
+      "alto": 960,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-frances-con-corazones-miraflores.webp",
+      "titulo": "Francés con corazones",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas francesas con corazones en Miraflores - Bloom Nails Spa",
+      "ancho": 962,
+      "alto": 1200,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-frances-con-lunares-miraflores.webp",
+      "titulo": "Francés con lunares",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas francesas con lunares en Miraflores - Bloom Nails Spa",
+      "ancho": 960,
+      "alto": 1088,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-turquesa-con-diseno-miraflores.webp",
+      "titulo": "Turquesa con diseño",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas turquesa con nail art en Miraflores - Bloom Nails Spa",
+      "ancho": 928,
+      "alto": 1120,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-nude-con-relieve-miraflores.webp",
+      "titulo": "Nude con relieve",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas nude con diseño en relieve en Miraflores - Bloom Nails Spa",
+      "ancho": 960,
+      "alto": 1088,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-azul-con-diseno-miraflores.webp",
+      "titulo": "Azul con diseño",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas azules con nail art en Miraflores - Bloom Nails Spa",
+      "ancho": 960,
+      "alto": 1088,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-multicolor-miraflores.webp",
+      "titulo": "Multicolor",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas multicolor con nail art en Miraflores - Bloom Nails Spa",
+      "ancho": 928,
+      "alto": 1120,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-nude-con-corazones-miraflores.webp",
+      "titulo": "Nude con corazones",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas nude con corazones en Miraflores - Bloom Nails Spa",
+      "ancho": 896,
+      "alto": 1152,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-gris-grafito-miraflores.webp",
+      "titulo": "Gris grafito",
+      "tecnica": "Manicure",
+      "descripcion_seo": "Manicure en gel gris grafito en Miraflores - Bloom Nails Spa",
+      "ancho": 896,
+      "alto": 1184,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-nude-natural-miraflores.webp",
+      "titulo": "Nude natural",
+      "tecnica": "Manicure",
+      "descripcion_seo": "Manicure nude natural en Miraflores - Bloom Nails Spa",
+      "ancho": 960,
+      "alto": 1088,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-baby-boomer-miraflores.webp",
+      "titulo": "Baby boomer",
+      "tecnica": "Manicure",
+      "descripcion_seo": "Uñas baby boomer en Miraflores - Bloom Nails Spa",
+      "ancho": 992,
+      "alto": 1056,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-azul-con-lunares-miraflores.webp",
+      "titulo": "Azul con lunares",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas con francés azul y lunares en Miraflores - Bloom Nails Spa",
+      "ancho": 896,
+      "alto": 1184,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-celeste-con-dibujos-miraflores.webp",
+      "titulo": "Celeste con dibujos",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas celestes con dibujos en Miraflores - Bloom Nails Spa",
+      "ancho": 960,
+      "alto": 1088,
+      "visible": true
+    },
+    {
+      "imagen": "/assets/images/galeria/unas-francesa-clasica-miraflores.webp",
+      "titulo": "Francesa clásica",
+      "tecnica": "Manicure",
+      "descripcion_seo": "Manicure francesa clásica en Miraflores - Bloom Nails Spa",
+      "ancho": 1097,
+      "alto": 1200,
+      "visible": true
+    }
+  ]
+}

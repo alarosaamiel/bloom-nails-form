@@ -1,12 +1,12 @@
 {
   "name": "Bloom Nails Spa - Miraflores",
   "short_name": "Bloom Nails",
-  "description": "No hacemos simplemente uñas. Creamos un momento para ti.",
+  "description": "Salón de uñas en Miraflores: manicure, pedicure y nail art. Creamos un momento para ti.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#FAF8F6",
-  "theme_color": "#bf9270",
+  "theme_color": "#FAF8F6",
   "icons": [
     {
       "src": "/assets/icons/icon-192.png",
@@ -18,5 +18,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "lang": "es-PE"
 }

@@ -1,0 +1,8 @@
+{
+  "packs": [
+    { "titulo": "Manicure Gel + Pedicure Gel", "descripcion": "El dúo perfecto: manos y pies con acabado en gel de larga duración. Incluye exfoliación, masaje y nutrición profunda.", "etiqueta": "Más popular", "visible": true },
+    { "titulo": "Manicure Polygel + Pedicure Gel", "descripcion": "Extensiones en polygel para tus manos combinadas con pedicure en gel. Duración y elegancia en un solo servicio.", "etiqueta": "Nuevo", "visible": true },
+    { "titulo": "Manicure Rubber + Pedicure Gel", "descripcion": "Manicure con base rubber para mayor adherencia y acabado impecable, combinado con pedicure en gel de larga duración.", "etiqueta": "Especial", "visible": true },
+    { "titulo": "Manicure Gel + Diseño", "descripcion": "Esmaltado semipermanente en gel con diseño personalizado de nail art. Un acabado único con la duración que buscas.", "etiqueta": "Exclusivo", "visible": true }
+  ]
+}

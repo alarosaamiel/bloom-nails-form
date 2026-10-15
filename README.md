@@ -1,70 +1,99 @@
-# Bloom Nails Spa — Production V3.3 Marketing Tracking Edition
+# Bloom Nails Spa — Web v5
 
-Incluye la versión lista para GitHub Pages con:
+Web nueva de bloomnailssalon.com con pestañas, portada en video y contenido editable.
 
-- Google Tag Manager instalado: `GTM-TFHLNXBX`
-- Google Analytics 4 instalado: `G-XG3P540G1B`
-- Microsoft Clarity listo vía Google Tag Manager
-- SEO local y Open Graph actualizado
-- `og-image.jpg` para WhatsApp/Facebook/LinkedIn
-- PWA básica: manifest + service worker + iconos móviles
-- Sitemap y robots.txt
-- Schema.org BeautySalon con AggregateRating real: 4.9 / 91 reseñas
-- Eventos personalizados enviados a `dataLayer`, GA4, Clarity y Meta Pixel cuando esté disponible
-
-## Eventos incluidos
-
-- `page_ready`
-- `click_whatsapp`
-- `conversion_reserva_intent`
-- `click_reservar`
-- `click_instagram`
-- `click_tiktok`
-- `click_maps`
-- `click_phone`
-- `click_email`
-- `click_contacto`
-- `click_trabaja_con_nosotros`
-- `click_promotion`
-- `click_gallery`
-- `click_review`
-- `scroll_50`
-- `scroll_90`
-- `form_submit`
-- `submit_contact_form`
-- `submit_job_form`
-
-## Cómo publicar
+## Cómo publicar (igual que siempre)
 
 1. Descomprime el ZIP.
-2. Copia todo el contenido dentro de tu carpeta local del repositorio `bloom-nails-form`.
-3. En GitHub Desktop haz commit con el mensaje: `Bloom V3.3 Marketing Tracking`.
-4. Haz `Push origin`.
-5. Espera 1–2 minutos.
-6. Abre `https://bloomnailssalon.com` en incógnito.
-7. Revisa Google Analytics > Tiempo real y Microsoft Clarity > Panel.
+2. Copia **todo** su contenido dentro de la carpeta local de tu repositorio, reemplazando los archivos.
+3. En GitHub Desktop haz commit con el mensaje `Bloom v5 nueva web` y luego **Push origin**.
+4. Espera 1–2 minutos y abre https://bloomnailssalon.com en modo incógnito.
+5. Revisa Google Analytics > Tiempo real y Microsoft Clarity para confirmar que llegan visitas.
 
-## Pendientes opcionales
+Los archivos viejos que ya no se usan (`assets/videos/video_001_…mp4` y `assets/fonts/font_00…woff2`) se pueden borrar del repositorio, pero no molestan si se quedan.
 
-- Crear Meta Pixel y agregarlo desde Google Tag Manager.
-- Crear Google Search Console y verificar dominio.
-- Crear dashboard en Looker Studio con GA4.
+## Qué se conservó
 
+- Mismo dominio, mismo título y descripción para Google, mismas palabras clave.
+- Todas las fotos con sus mismas direcciones y textos alternativos (siguen apareciendo en Google Imágenes).
+- Google Tag Manager `GTM-TFHLNXBX`, Google Analytics 4 `G-XG3P540G1B`, Clarity (vía GTM) y todos los eventos (`conversion_reserva_intent`, `click_whatsapp`, `view_section`, etc.).
+- Formularios con el mismo Formspree (`mdavryko`): Trabaja con nosotros y Libro de Reclamaciones.
+- Los enlaces viejos siguen funcionando: `#servicios`, `#galeria`, `#testimonios`, `#contacto`, `#trabaja`, `#bloom-experience`, `#momentos`, `#promociones`.
 
-## Bloom V4.0 Marketing Intelligence
+## Qué se mejoró para buscadores e IA
 
-Incluye capa de tracking para GA4/GTM/Clarity/Meta Pixel:
-- clics en WhatsApp, Reservar, Instagram, Maps, teléfono, email, reseñas, promociones y galería
-- view_section para secciones visitadas
-- view_service, view_promotion y view_testimonial
-- scroll_depth (25/50/75/90/100, como parámetro de un mismo evento)
-- video_progress (25/50/75%) y video_start / video_complete
-- engaged_time a los 30/60/120/180/300 segundos
-- form_start y form_submit
-- Los clics de administración (modo edición de galería/promos/testimonios) quedan excluidos del tracking para no contaminar los datos con actividad interna.
+- Encabezado principal con palabras clave: "Salón de manicure y pedicure en Miraflores, Lima".
+- Datos estructurados ampliados: cada servicio con su descripción, horario, ubicación, calificación, redes y botón de reserva.
+- Preguntas frecuentes visibles en la web y marcadas para Google (sección Contacto).
+- `llms.txt`: resumen del negocio pensado para ChatGPT, Perplexity, Claude y Gemini.
+- `robots.txt` permite explícitamente a los buscadores con IA.
+- `sitemap.xml` incluye todas las fotos.
+- Todo el contenido está en la página aunque esté en otra pestaña, así Google lo lee completo.
 
-Conversión sugerida en GA4 (marcar como evento clave):
-- `conversion_reserva_intent` — único evento de conversión "canónico". Se dispara con cualquier clic a WhatsApp con intención de reservar, venga de una promo, servicio o experiencia.
-- `submit_job_form` — postulación de trabajo enviada con éxito.
+## Nuevos eventos de seguimiento
 
-`click_whatsapp`, `click_reservar`, `click_promotion`, etc. son eventos de **diagnóstico** (para saber por dónde entra la gente) y no deben marcarse como conversión — ya están representados dentro de `conversion_reserva_intent` para ese mismo clic, y marcarlos también duplicaría el conteo total de conversiones en los reportes de GA4.
+- `select_page_tab`: qué pestaña del menú abren (inicio, servicios, galeria, reels, opiniones, contacto).
+- `select_experience_tab`, `filter_gallery`, `gallery_show_more`, `open_reclamo_form`.
+- El video de portada no cuenta como `video_start` para no inflar los datos.
+
+## Contenido editable (sin tocar el diseño)
+
+| Archivo | Para qué |
+|---|---|
+| `content/galeria.json` | Fotos de la galería: imagen, título, técnica (Manicure, Nail art o Pedicure), texto para Google y si se ve o no |
+| `content/reels.json` | Reels: video, portada, texto y si se ve o no |
+| `content/ajustes.json` | Mostrar u ocultar Packs y Experiencias, y cuántas fotos se ven al inicio |
+| `content/packs.json` | Packs guardados para cuando los actives |
+
+Las fotos nuevas deben subirse comprimidas (webp, máx. ~200 KB) y los videos en 720p, menos de 5 MB.
+
+## Pendientes recomendados
+
+- En Google Search Console: enviar `https://bloomnailssalon.com/sitemap.xml` y pedir "Solicitar indexación" de la página principal.
+- Activar la actualización automática de reseñas (ver abajo).
+
+## Reseñas de Google automáticas
+
+El archivo `.github/workflows/actualizar-resenas.yml` consulta Google todos los días a las 6:00 a. m.
+y actualiza la calificación y el número de reseñas en la web, en los datos para Google y en `llms.txt`.
+Para activarlo (una sola vez):
+
+1. En https://console.cloud.google.com crea un proyecto, activa la facturación y habilita **Places API (New)**.
+2. En *APIs y servicios > Credenciales* crea una **clave de API** y restríngela solo a *Places API (New)*.
+3. En GitHub, en tu repositorio: *Settings > Secrets and variables > Actions > New repository secret*,
+   nombre `GOOGLE_PLACES_API_KEY`, valor: tu clave.
+4. En la pestaña **Actions**, abre "Actualizar reseñas de Google" y pulsa **Run workflow** para probarlo.
+   En el registro verás el número de reseñas y el *Place ID* de tu negocio. Guárdalo también como secreto
+   `GOOGLE_PLACE_ID` para que la consulta sea más precisa y económica.
+
+Una consulta al día queda dentro del uso gratuito mensual de Google. Si la clave falta o falla,
+la web simplemente sigue mostrando el último número guardado.
+- Confirmar la respuesta "¿Atienden sin cita?" en Preguntas frecuentes.
+
+## Conversiones de campañas de Google Ads
+
+La web ya registra cada clic en Reservar (WhatsApp) como `conversion_reserva_intent`, con la campaña de origen.
+Además:
+
+- **Recuerda la campaña 30 días** en el navegador de la clienta: si vio el anuncio y vuelve días después, la reserva igual se atribuye a esa campaña.
+- **Agrega un código al mensaje de WhatsApp** cuando la visita viene de una campaña, por ejemplo `(ref: G-OCTUBRE)`. `G` = Google, `M` = Meta, `T` = TikTok. Las visitas que no vienen de anuncios no llevan código.
+- **Mensaje en inglés para turistas:** si la visita viene de la campaña `searchen`, el mensaje de WhatsApp se abre en inglés (por ejemplo *"Hi Bloom! I would like to book a Manicure Gel appointment. (ref: G-SEARCHEN)"*). Para agregar otra campaña en inglés, súmala a `CAMPANAS_EN` en `assets/js/tracking.js`.
+
+### Configuración (una sola vez)
+
+1. **Vincular cuentas:** en Google Ads > Herramientas > Cuentas vinculadas, vincula tu propiedad de Google Analytics 4. Verifica que el **etiquetado automático** esté activado (Configuración de la cuenta).
+2. **Marcar la conversión en GA4:** Administrar > Eventos (o Eventos clave) > marca `conversion_reserva_intent` como **evento clave**. Aparece después de que alguien haya hecho clic al menos una vez.
+3. **Importarla en Google Ads:** Objetivos > Conversiones > Nueva acción de conversión > Importar > Google Analytics 4 > elige `conversion_reserva_intent`. Recuento: **Una** por clic. Déjala como acción **principal** para que las campañas optimicen hacia reservas.
+4. **Nombre corto por campaña:** en cada campaña, en Configuración > Opciones de URL de la campaña > *Sufijo de URL final*, escribe por ejemplo
+   `utm_source=google&utm_medium=cpc&utm_campaign=octubre`
+   Sufijos de las campañas actuales:
+   - G-Search_Captura_Salón_Miraflores_26: `utm_source=google&utm_medium=cpc&utm_campaign=searchsalon`
+   - Bloom_Search_Visitors_EN_Miraflores_2026: `utm_source=google&utm_medium=cpc&utm_campaign=searchen`
+   - Bloom_PMax_Miraflores_Prueba_2026: `utm_source=google&utm_medium=cpc&utm_campaign=pmax`
+
+   El nombre (`octubre`) es el que aparece en el código de WhatsApp: úsalo corto, sin espacios (máximo 12 letras).
+
+### Medir reservas reales
+
+Quien atiende WhatsApp anota el código `ref` de cada clienta que **sí agenda** (una hoja simple: fecha, código, servicio).
+A fin de mes comparas, por campaña: clics en Reservar (Google Ads o GA4) contra reservas reales (tu hoja). Así sabes cuánto te cuesta realmente cada clienta.

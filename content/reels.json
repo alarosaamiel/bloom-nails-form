@@ -1,0 +1,28 @@
+{
+  "reels": [
+    {
+      "video": "/assets/videos/reels/bloom-girl.mp4",
+      "portada": "/assets/videos/reels/bloom-girl.webp",
+      "titulo": "Ser una Bloom Girl es un hábito",
+      "visible": true
+    },
+    {
+      "video": "/assets/videos/reels/luxury-treatment.mp4",
+      "portada": "/assets/videos/reels/luxury-treatment.webp",
+      "titulo": "Luxury treatment: tu manicure paso a paso",
+      "visible": true
+    },
+    {
+      "video": "/assets/videos/reels/farmear-aura.mp4",
+      "portada": "/assets/videos/reels/farmear-aura.webp",
+      "titulo": "Esto sí es farmear aura",
+      "visible": true
+    },
+    {
+      "video": "/assets/videos/reels/estilos-de-unas.mp4",
+      "portada": "/assets/videos/reels/estilos-de-unas.webp",
+      "titulo": "¿Qué estilo de uñas va contigo?",
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# Actualiza todos los días la calificación y la cantidad de reseñas de Google en la web.
+# Necesita el secreto GOOGLE_PLACES_API_KEY (y opcionalmente GOOGLE_PLACE_ID) en
+# Settings > Secrets and variables > Actions.
+name: Actualizar reseñas de Google
+on:
+  schedule:
+    - cron: "0 11 * * *"   # todos los días a las 6:00 a. m. de Lima
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+jobs:
+  resenas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Consultar Google y actualizar archivos
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
+        run: python3 .github/scripts/resenas.py
+      - name: Publicar si cambió
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "Bloom Web"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/ajustes.json index.html llms.txt
+          if git diff --cached --quiet; then
+            echo "Las reseñas no cambiaron."
+            exit 0
+          fi
+          git commit -m "Actualizar reseñas de Google"
+          git push origin main
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+          # Llevar el mismo número al borrador del panel (si existe)
+          if git ls-remote --exit-code --heads origin borrador >/dev/null; then
+            git fetch origin borrador
+            git checkout -B borrador origin/borrador
+            git merge --no-edit main && git push origin borrador || echo "No se pudo actualizar el borrador; se hará al publicar."
+          fi
