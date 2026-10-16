@@ -1,10 +1,12 @@
 {
   "fotos": [
     {
-      "imagen": "/assets/subidas/fotos/ad754b19-8ab9-4911-a2b7-f21212101b7d.jpg",
+      "imagen": "/assets/subidas/fotos/ad754b19-8ab9-4911-a2b7-f21212101b7d.webp",
       "titulo": "Prueba",
       "tecnica": "Manicure",
-      "visible": true
+      "visible": true,
+      "ancho": 1050,
+      "alto": 1400
     },
     {
       "imagen": "/assets/images/galeria/unas-rojo-intenso-miraflores.webp",
