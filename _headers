@@ -1,0 +1,3 @@
+# Solo lo usa la vista previa (Cloudflare). Evita que Google indexe la copia de prueba.
+/*
+  X-Robots-Tag: noindex

@@ -1,0 +1,167 @@
+# Panel de contenido de Bloom Nails Spa (Pages CMS: https://app.pagescms.org)
+# La administradora trabaja en la rama "borrador". Nada llega a la web hasta pulsar "Publicar en la web".
+
+media:
+  - name: fotos
+    label: Fotos
+    input: assets/subidas/fotos
+    output: /assets/subidas/fotos
+    categories: [image]
+    rename: safe
+  - name: videos
+    label: Videos
+    input: assets/subidas/videos
+    output: /assets/subidas/videos
+    categories: [video]
+    rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "Panel: agrega {filename}"
+      update: "Panel: actualiza {filename}"
+      delete: "Panel: elimina {filename}"
+      rename: "Panel: renombra {oldFilename} a {newFilename}"
+
+content:
+  - name: galeria
+    label: Galería de fotos
+    type: file
+    path: content/galeria.json
+    fields:
+      - name: fotos
+        label: Fotos
+        description: El orden de esta lista es el orden en la web. Las primeras se ven al entrar.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titulo} · {tecnica}"
+        fields:
+          - name: imagen
+            label: Foto
+            type: image
+            required: true
+            options:
+              media: fotos
+          - name: titulo
+            label: Nombre del diseño
+            type: string
+            required: true
+            description: Corto, por ejemplo "Rojas almendra" o "Nude con dorado".
+          - name: tecnica
+            label: Técnica (para los filtros)
+            type: select
+            required: true
+            options:
+              values: [Manicure, Nail art, Pedicure]
+          - name: descripcion_seo
+            label: Descripción para Google
+            type: string
+            description: Ejemplo "Uñas acrílicas rojas en Miraflores - Bloom Nails Spa". Ayuda a aparecer en Google Imágenes.
+          - name: visible
+            label: Mostrar en la web
+            type: boolean
+          - name: ancho
+            type: number
+            hidden: true
+          - name: alto
+            type: number
+            hidden: true
+
+  - name: reels
+    label: Reels
+    type: file
+    path: content/reels.json
+    fields:
+      - name: reels
+        label: Reels
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titulo}"
+        fields:
+          - name: video
+            label: Video (vertical)
+            type: file
+            required: true
+            options:
+              media: videos
+          - name: portada
+            label: Portada (opcional)
+            type: image
+            description: Si la dejas vacía, se crea sola a partir del video.
+            options:
+              media: fotos
+          - name: titulo
+            label: Texto bajo el reel
+            type: string
+            required: true
+          - name: visible
+            label: Mostrar en la web
+            type: boolean
+
+  - name: ajustes
+    label: Secciones de la web
+    type: file
+    path: content/ajustes.json
+    fields:
+      - name: mostrar_packs
+        label: Mostrar Packs (en Servicios)
+        type: boolean
+      - name: mostrar_experiencias
+        label: Mostrar Bloom Birthday y Bloom Bridal (en Inicio)
+        type: boolean
+      - name: fotos_visibles_al_inicio
+        label: Fotos que se ven antes de "Ver más diseños"
+        type: number
+      - name: calificacion_google
+        label: Calificación en Google
+        type: number
+        description: Se actualiza sola cada día desde Google.
+      - name: resenas_google
+        label: Cantidad de reseñas en Google
+        type: number
+        description: Se actualiza sola cada día desde Google. No hace falta tocarla.
+
+  - name: packs
+    label: Packs
+    type: file
+    path: content/packs.json
+    fields:
+      - name: packs
+        label: Packs
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titulo}"
+        fields:
+          - name: titulo
+            label: Nombre del pack
+            type: string
+            required: true
+          - name: descripcion
+            label: Descripción
+            type: text
+          - name: etiqueta
+            label: Etiqueta
+            type: string
+            description: Por ejemplo "Más popular" o "Nuevo". Opcional.
+          - name: visible
+            label: Mostrar en la web
+            type: boolean
+
+actions:
+  - name: publicar
+    label: Publicar en la web
+    workflow: publicar.yml
+    cancelable: false
+    confirm:
+      title: ¿Publicar los cambios?
+      message: Todo lo que está en la vista previa pasará a bloomnailssalon.com en 1 o 2 minutos. Revisa la vista previa antes de continuar.
+      button: Publicar

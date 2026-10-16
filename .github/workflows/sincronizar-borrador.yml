@@ -1,0 +1,29 @@
+# Si alguien cambia la web directamente en main, el borrador recibe esos cambios
+# para que la vista previa siempre parta de la versión publicada.
+name: Mantener borrador al día
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+concurrency:
+  group: borrador
+  cancel-in-progress: false
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Llevar los cambios de main al borrador
+        run: |
+          git config user.name "Bloom Web"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin borrador >/dev/null; then
+            git checkout -B borrador origin/borrador
+            git merge --no-edit origin/main
+          else
+            git checkout -b borrador origin/main
+          fi
+          git push origin borrador
