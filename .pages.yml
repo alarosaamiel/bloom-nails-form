@@ -33,8 +33,7 @@ content:
     path: content/galeria.json
     fields:
       - name: fotos
-        label: Fotos
-        description: El orden de esta lista es el orden en la web. Las primeras se ven al entrar.
+        label: Fotos (el orden de la lista es el orden en la web)
         type: object
         list:
           collapsible:

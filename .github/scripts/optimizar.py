@@ -91,9 +91,22 @@ for carpeta, ext, funcion in ((FOTOS, EXT_FOTO, optimizar_foto), (VIDEOS, EXT_VI
                 funcion(archivo)
 
 
+def resolver(texto: str) -> str:
+    """Devuelve la ruta nueva de un archivo ya optimizado.
+    Cubre el caso habitual: la foto se sube (y se convierte) antes de guardar la galería,
+    así que la galería todavía apunta al archivo original, que ya no existe."""
+    texto = cambios.get(texto, texto)
+    if texto.startswith("/assets/subidas/") and not (RAIZ / texto.lstrip("/")).exists():
+        p = RAIZ / texto.lstrip("/")
+        for alt in (p.with_suffix(".webp"), p.with_name(p.stem + "-web.webp"), p.with_name(p.stem + "-web.mp4")):
+            if alt.exists():
+                return publica(alt)
+    return texto
+
+
 def reemplazar(valor):
     if isinstance(valor, str):
-        return cambios.get(valor, valor)
+        return resolver(valor)
     if isinstance(valor, list):
         return [reemplazar(v) for v in valor]
     if isinstance(valor, dict):

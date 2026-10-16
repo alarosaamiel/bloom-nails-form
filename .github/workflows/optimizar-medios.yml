@@ -2,6 +2,7 @@
 # para que la web siga rápida: fotos a WebP livianas, videos a 720p con portada.
 name: Optimizar fotos y videos
 on:
+  workflow_dispatch: {}
   push:
     branches: [borrador]
     paths:

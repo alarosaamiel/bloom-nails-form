@@ -1,7 +1,7 @@
 /* Bloom Nails Spa — Service worker v5
    - Páginas y contenido (/content): primero la red, para que los cambios del panel se vean al instante.
    - Fuentes, estilos, imágenes y videos: primero la memoria del teléfono, para cargar rápido. */
-const CACHE = 'bloom-v5-20261014';
+const CACHE = 'bloom-v5-20261015';
 const BASE = ['/', '/index.html', '/assets/css/bloom.css?v=5.1', '/assets/js/bloom.js?v=5.2', '/assets/js/tracking.js?v=5.2', '/assets/manifest.json'];
 
 self.addEventListener('install', (e) => {
