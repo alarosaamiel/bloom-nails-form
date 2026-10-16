@@ -1,14 +1,6 @@
 {
   "fotos": [
     {
-      "imagen": "/assets/subidas/fotos/ad754b19-8ab9-4911-a2b7-f21212101b7d.webp",
-      "titulo": "Prueba",
-      "tecnica": "Manicure",
-      "visible": true,
-      "ancho": 1050,
-      "alto": 1400
-    },
-    {
       "imagen": "/assets/images/galeria/unas-rojo-intenso-miraflores.webp",
       "titulo": "Rojo intenso",
       "tecnica": "Manicure",
@@ -88,6 +80,15 @@
       "visible": true,
       "ancho": 949,
       "alto": 999
+    },
+    {
+      "imagen": "/assets/subidas/fotos/ad754b19-8ab9-4911-a2b7-f21212101b7d.webp",
+      "titulo": "Verde con hojas",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas nude con diseño de hojas verdes en Miraflores - Bloom Nails Spa",
+      "visible": true,
+      "ancho": 1050,
+      "alto": 1400
     },
     {
       "imagen": "/assets/images/image_027_f91c1238fc67.webp",
