@@ -48,21 +48,23 @@
 <meta name="twitter:description" content="Salón de uñas en Miraflores especializado en manicure, pedicure, nail art, uñas en gel, acrílicas, rubber base, soft gel y polygel.">
 <meta name="twitter:image" content="https://bloomnailssalon.com/og-bloom-2026.jpg">
 
-<!-- Google Tag Manager (Clarity se carga desde aquí) -->
+<!-- Google Tag Manager (Clarity se carga desde aquí) y Google Analytics 4.
+     Solo se activan en bloomnailssalon.com: las visitas a la vista previa no se cuentan. -->
 <script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TFHLNXBX');
-</script>
-<!-- Google Analytics 4 (directo, igual que antes) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XG3P540G1B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+if (/(^|\.)bloomnailssalon\.com$/.test(location.hostname)) {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TFHLNXBX');
+  var ga = document.createElement('script'); ga.async = true;
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-XG3P540G1B';
+  document.head.appendChild(ga);
   gtag('js', new Date());
   gtag('config', 'G-XG3P540G1B');
+}
 </script>
 
 <!-- Datos estructurados para Google y buscadores con IA -->
