@@ -94,7 +94,9 @@
   /* ── Campañas para turistas: el mensaje de WhatsApp se abre en inglés ── */
   var CAMPANAS_EN = ['searchen'];
   function enIngles(a){ return CAMPANAS_EN.indexOf(String(a.utm_campaign || '').toLowerCase()) > -1; }
+  window.bloomEnIngles = function(){ try { return enIngles(getAttribution()); } catch(e){ return false; } };
   function mensajeIngles(el){
+    if(el.getAttribute('data-msg-en')) return el.getAttribute('data-msg-en');
     var tarjeta = el.closest('.servicio-card');
     if(tarjeta){
       var nombre = tarjeta.querySelector('.servicio-name');

@@ -1,0 +1,81 @@
+/* Bloom Nails Spa — Asistente guiado de la web (v2) */
+.ab-lanzador {
+  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 70;
+  display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 20px 0 8px;
+  border: 0; border-radius: 999px; background: var(--grafito); color: var(--marfil); cursor: pointer;
+  font: 400 15px/1 var(--sans); box-shadow: 0 10px 28px rgba(58, 58, 58, .28);
+  -webkit-tap-highlight-color: transparent; transition: transform .2s ease;
+}
+.ab-lanzador:hover { transform: translateY(-1px); }
+.ab-lanzador:focus-visible, .ab-panel :focus-visible { outline: 2px solid var(--oro); outline-offset: 2px; }
+.ab-lanzador .ab-flor { width: 38px; height: 38px; border-radius: 50%; background: var(--degradado); display: grid; place-items: center; }
+.ab-lanzador .ab-flor svg { width: 22px; height: 22px; }
+.ab-con-simulador .ab-lanzador { bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+.ab-abierto .ab-lanzador { display: none; }
+/* Llamar la atención: halo dorado que se expande y la flor que late, hasta que la clienta abre el chat */
+.ab-lanzador::before { content: ""; position: absolute; inset: 0; border-radius: 999px; pointer-events: none; animation: ab-halo 2.4s ease-out 1.2s infinite; }
+.ab-lanzador .ab-flor { animation: ab-latido 2.4s ease-in-out 1.2s infinite; }
+@keyframes ab-halo { 0% { box-shadow: 0 0 0 0 rgba(200, 165, 106, .75); } 70% { box-shadow: 0 0 0 18px rgba(200, 165, 106, 0); } 100% { box-shadow: 0 0 0 0 rgba(200, 165, 106, 0); } }
+@keyframes ab-latido { 0%, 40%, 100% { transform: scale(1); } 12% { transform: scale(1.16); } 24% { transform: scale(.96); } }
+.ab-visto .ab-lanzador::before, .ab-visto .ab-lanzador .ab-flor { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .ab-lanzador::before, .ab-lanzador .ab-flor { animation: none; }
+  .ab-lanzador { box-shadow: 0 0 0 3px var(--oro), 0 10px 28px rgba(58, 58, 58, .28); }
+}
+
+.ab-panel {
+  position: fixed; z-index: 71; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  width: min(380px, calc(100vw - 32px)); height: min(620px, calc(100dvh - 32px));
+  display: flex; flex-direction: column; background: var(--marfil); color: var(--grafito);
+  border-radius: 24px; box-shadow: 0 24px 60px rgba(58, 58, 58, .22); overflow: hidden;
+  font-family: var(--sans);
+}
+.ab-panel[hidden] { display: none; }
+.ab-cabeza { display: flex; align-items: center; gap: 12px; padding: 14px 10px 14px 18px; background: var(--arena); border-bottom: 1px solid var(--champagne); }
+.ab-cabeza .ab-flor { width: 40px; height: 40px; flex: none; border-radius: 50%; background: var(--degradado); display: grid; place-items: center; }
+.ab-cabeza .ab-flor svg { width: 22px; height: 22px; }
+.ab-titulo { flex: 1; min-width: 0; }
+.ab-titulo strong { display: block; font: 500 21px/1.1 var(--serif); color: var(--grafito); }
+.ab-titulo span { font-size: 13px; color: var(--grafito-dim); }
+.ab-idioma { min-width: 44px; height: 44px; flex: none; border: 1px solid var(--champagne); border-radius: 999px; background: var(--blanco); color: var(--grafito); font: 500 13px/1 var(--sans); letter-spacing: .06em; cursor: pointer; padding: 0 12px; }
+.ab-cerrar { width: 44px; height: 44px; flex: none; border: 0; border-radius: 50%; background: transparent; color: var(--grafito); cursor: pointer; display: grid; place-items: center; }
+.ab-cerrar svg { width: 20px; height: 20px; }
+
+.ab-log { flex: 1; overflow-y: auto; padding: 18px 16px 8px; display: flex; flex-direction: column; gap: 10px; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.ab-msg { max-width: 86%; padding: 11px 15px; font-size: 15px; line-height: 1.5; white-space: pre-line; overflow-wrap: anywhere; }
+.ab-bot { align-self: flex-start; background: var(--blanco); border: 1px solid var(--champagne); border-radius: 18px 18px 18px 6px; }
+.ab-yo { align-self: flex-end; background: var(--champagne); border-radius: 18px 18px 6px 18px; }
+.ab-msg ul { margin: 6px 0 0; padding-left: 18px; white-space: normal; }
+.ab-msg li { margin: 2px 0; }
+.ab-msg a { color: var(--madera-dim); }
+.ab-escribiendo { align-self: flex-start; display: flex; gap: 4px; padding: 14px 16px; background: var(--blanco); border: 1px solid var(--champagne); border-radius: 18px 18px 18px 6px; }
+.ab-escribiendo i { width: 6px; height: 6px; border-radius: 50%; background: var(--madera); opacity: .4; animation: ab-punto 1s infinite; }
+.ab-escribiendo i:nth-child(2) { animation-delay: .15s; } .ab-escribiendo i:nth-child(3) { animation-delay: .3s; }
+@keyframes ab-punto { 50% { opacity: 1; } }
+
+.ab-opciones { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 0 6px; }
+.ab-chip {
+  min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--madera);
+  background: transparent; color: var(--grafito); font: 400 15px/1.2 var(--sans); cursor: pointer;
+  text-align: left; -webkit-tap-highlight-color: transparent; text-decoration: none; display: inline-flex; align-items: center;
+}
+.ab-chip:hover { background: var(--arena); }
+.ab-chip[disabled] { opacity: .45; cursor: default; background: transparent; }
+.ab-wa {
+  display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 52px;
+  border-radius: 999px; background: var(--degradado); color: var(--blanco); text-decoration: none;
+  font: 500 16px/1 var(--sans); box-shadow: 0 10px 24px rgba(184, 145, 115, .28); margin-top: 2px;
+}
+.ab-panel a.ab-wa, .ab-panel a.ab-wa:hover, .ab-panel a.ab-wa span { color: var(--blanco); }
+.ab-wa svg { width: 22px; height: 22px; flex: none; }
+.ab-pie { padding: 10px 16px calc(12px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--champagne); font-size: 13px; color: var(--grafito-dim); text-align: center; }
+.ab-pie a { color: var(--madera-dim); }
+
+@media (max-width: 600px) {
+  .ab-panel { right: 0; left: 0; bottom: 0; width: 100%; height: 88dvh; border-radius: 24px 24px 0 0; }
+  .ab-abierto { overflow: hidden; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ab-escribiendo i { animation: none; opacity: .8; }
+  .ab-lanzador { transition: none; }
+}
