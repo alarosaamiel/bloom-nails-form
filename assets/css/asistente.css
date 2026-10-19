@@ -1,4 +1,4 @@
-/* Bloom Nails Spa — Asistente guiado de la web (v2) */
+/* Bloom Nails Spa — Asistente guiado de la web (v3) */
 .ab-lanzador {
   position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 70;
   display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 20px 0 8px;
@@ -79,3 +79,15 @@
   .ab-escribiendo i { animation: none; opacity: .8; }
   .ab-lanzador { transition: none; }
 }
+
+/* ── Tarjetas de servicio: toda la tarjeta abre WhatsApp (Clarity mostró toques en el nombre y la descripción) ── */
+.servicio-card { position: relative; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: background-color .2s ease; }
+.servicio-card .enlace::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.servicio-card .enlace {
+  position: static; padding: 0 16px; border: 1px solid var(--madera); border-radius: 999px;
+  color: var(--madera-dim); background: transparent; transition: background-color .2s ease, color .2s ease;
+}
+.servicio-card:hover .enlace, .servicio-card:active .enlace { background: var(--madera); color: var(--blanco); }
+.servicio-card:active { background-color: var(--arena); }
+.servicio-card .enlace:focus-visible { outline: 2px solid var(--oro); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .servicio-card, .servicio-card .enlace { transition: none; } }
