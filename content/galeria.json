@@ -19,6 +19,15 @@
       "alto": 1088
     },
     {
+      "imagen": "/assets/subidas/fotos/foto-bloom.webp",
+      "titulo": "Halloween",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Nails Art -Miraflores - Bloom Nails Spa",
+      "visible": true,
+      "ancho": 787,
+      "alto": 1400
+    },
+    {
       "imagen": "/assets/images/galeria/unas-rojo-con-detalles-miraflores.webp",
       "titulo": "Rojo con detalles",
       "tecnica": "Nail art",
@@ -224,15 +233,6 @@
       "visible": true,
       "ancho": 1097,
       "alto": 1200
-    },
-    {
-      "imagen": "/assets/subidas/fotos/foto-bloom.webp",
-      "titulo": "Halloween",
-      "tecnica": "Nail art",
-      "descripcion_seo": "Nails Art -Miraflores - Bloom Nails Spa",
-      "visible": true,
-      "ancho": 787,
-      "alto": 1400
     }
   ]
 }
