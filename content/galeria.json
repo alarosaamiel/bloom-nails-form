@@ -226,11 +226,13 @@
       "alto": 1200
     },
     {
-      "imagen": "/assets/subidas/fotos/foto-bloom.jpg",
+      "imagen": "/assets/subidas/fotos/foto-bloom.webp",
       "titulo": "Halloween",
       "tecnica": "Nail art",
       "descripcion_seo": "Nails Art -Miraflores - Bloom Nails Spa",
-      "visible": true
+      "visible": true,
+      "ancho": 787,
+      "alto": 1400
     }
   ]
 }
