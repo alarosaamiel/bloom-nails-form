@@ -10,11 +10,13 @@
       "alto": 1200
     },
     {
-      "imagen": "/assets/subidas/fotos/lo-que-dicen-nuestras-clientas-7.jpg",
+      "imagen": "/assets/subidas/fotos/lo-que-dicen-nuestras-clientas-7-web.webp",
       "titulo": "Fransesas con polka y flor en 3D",
       "tecnica": "Nail art",
       "descripcion_seo": "Uñas acrílicas en Miraflores - Bloom Nails Spa",
-      "visible": true
+      "visible": true,
+      "ancho": 1080,
+      "alto": 1350
     },
     {
       "imagen": "/assets/images/galeria/unas-francesa-almendra-miraflores.webp",
