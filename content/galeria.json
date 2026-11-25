@@ -1,6 +1,15 @@
 {
   "fotos": [
     {
+      "imagen": "/assets/subidas/fotos/lo-que-dicen-nuestras-clientas-10.webp",
+      "titulo": "Marron con ojo de gato",
+      "tecnica": "Nail art",
+      "descripcion_seo": "Uñas con efecto ojo de gato en Miraflores - Bloom Nails Spa",
+      "visible": true,
+      "ancho": 1080,
+      "alto": 1350
+    },
+    {
       "imagen": "/assets/images/galeria/unas-rojo-intenso-miraflores.webp",
       "titulo": "Rojo intenso",
       "tecnica": "Manicure",
@@ -242,15 +251,6 @@
       "visible": true,
       "ancho": 1097,
       "alto": 1200
-    },
-    {
-      "imagen": "/assets/subidas/fotos/lo-que-dicen-nuestras-clientas-10.webp",
-      "titulo": "Marron con ojo de gato",
-      "tecnica": "Nail art",
-      "descripcion_seo": "Uñas con efecto ojo de gato en Miraflores - Bloom Nails Spa",
-      "visible": true,
-      "ancho": 1080,
-      "alto": 1350
     }
   ]
 }
